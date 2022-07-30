@@ -1,9 +1,9 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { MantineProvider } from '@mantine/core';
+import { MantineWrapper } from '@shared/util-common';
 
-const CustomApp = ({ Component, pageProps }: AppProps) => (
+const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <title>Veils App</title>
@@ -12,16 +12,10 @@ const CustomApp = ({ Component, pageProps }: AppProps) => (
         content="minimum-scale=1, initial-scale=1, width=device-width"
       />
     </Head>
-    <MantineProvider
-      withGlobalStyles
-      withNormalizeCSS
-      theme={{
-        colorScheme: 'light',
-      }}
-    >
+    <MantineWrapper>
       <Component {...pageProps} />
-    </MantineProvider>
+    </MantineWrapper>
   </>
 );
 
-export default CustomApp;
+export default App;
