@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@shared/ui-appbar": ["libs/shared/ui-appbar/src/index.ts"],
+      "@shared/ui-appbar/*": ["libs/shared/ui-appbar/src/lib/*"],
       "@shared/util-common/*": ["libs/shared/util-common/src/*"]
     }
   },
