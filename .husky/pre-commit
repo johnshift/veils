@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# run affected lint
+pnpm lint
+
+# run affected tests
+pnpm test
