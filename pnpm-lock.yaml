@@ -18,6 +18,8 @@ specifiers:
   '@nrwl/web': 14.5.1
   '@nrwl/workspace': 14.5.1
   '@swc/core': ^1.2.173
+  '@tanstack/react-query': ^4.0.10
+  '@tanstack/react-query-devtools': ^4.0.10
   '@testing-library/jest-dom': ^5.16.4
   '@testing-library/react': 13.3.0
   '@trivago/prettier-plugin-sort-imports': ^3.3.0
@@ -63,6 +65,7 @@ dependencies:
   '@mantine/hooks': 5.0.2_react@18.2.0
   '@mantine/next': 5.0.2_f9d158c997d3a21dd260032478ac8228
   '@nrwl/next': 14.5.1_38ca35d82fc2a1ee029ccbbfd9b26345
+  '@tanstack/react-query': 4.0.10_react-dom@18.2.0+react@18.2.0
   core-js: 3.24.1
   next: 12.2.3_850d4ee91924e701c20cec04912e6240
   react: 18.2.0
@@ -82,6 +85,7 @@ devDependencies:
   '@nrwl/web': 14.5.1_3edd3d9dfaf206f0c5e9038c8be56e3a
   '@nrwl/workspace': 14.5.1_139f833f3c1e06947b593a0753c18a3e
   '@swc/core': 1.2.220
+  '@tanstack/react-query-devtools': 4.0.10_react@18.2.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_react-dom@18.2.0+react@18.2.0
   '@trivago/prettier-plugin-sort-imports': 3.3.0_prettier@2.7.1
@@ -3353,6 +3357,46 @@ packages:
       tslib: 2.4.0
     dev: false
 
+  /@tanstack/match-sorter-utils/8.1.1:
+    resolution: {integrity: sha512-IdmEekEYxQsoLOR0XQyw3jD1GujBpRRYaGJYQUw1eOT1eUugWxdc7jomh1VQ1EKHcdwDLpLaCz/8y4KraU4T9A==}
+    engines: {node: '>=12'}
+    dependencies:
+      remove-accents: 0.4.2
+    dev: true
+
+  /@tanstack/query-core/4.0.10:
+    resolution: {integrity: sha512-9LsABpZXkWZHi4P1ozRETEDXQocLAxVzQaIhganxbNuz/uA3PsCAJxJTiQrknG5htLMzOF5MqM9G10e6DCxV1A==}
+    dev: false
+
+  /@tanstack/react-query-devtools/4.0.10_react@18.2.0:
+    resolution: {integrity: sha512-3J7LLYQjfjTI0DbPo0bA+M3l4kdvYSWAqihpeG1u93WVyZj0OEFviUv+4cK7+k2AVgQJAPMZ5xvtewKxOOFVrw==}
+    dependencies:
+      '@tanstack/match-sorter-utils': 8.1.1
+      '@types/use-sync-external-store': 0.0.3
+      use-sync-external-store: 1.2.0_react@18.2.0
+    transitivePeerDependencies:
+      - react
+    dev: true
+
+  /@tanstack/react-query/4.0.10_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-Wn5QhZUE5wvr6rGClV7KeQIUsdTmYR9mgmMZen7DSRWauHW2UTynFg3Kkf6pw+XlxxOLsyLWwz/Q6q1lSpM3TQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@tanstack/query-core': 4.0.10
+      '@types/use-sync-external-store': 0.0.3
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
+
   /@testing-library/dom/8.16.0:
     resolution: {integrity: sha512-uxF4zmnLHHDlmW4l+0WDjcgLVwCvH+OVLpD8Dfp+Bjfz85prwxWGbwXgJdLtkgjD0qfOzkJF9SmA6YZPsMYX4w==}
     engines: {node: '>=12'}
@@ -3659,6 +3703,9 @@ packages:
     dependencies:
       '@types/jest': 27.4.1
     dev: true
+
+  /@types/use-sync-external-store/0.0.3:
+    resolution: {integrity: sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==}
 
   /@types/ws/8.5.3:
     resolution: {integrity: sha512-6YOoWjruKj1uLf3INHH7D3qTXwFfEsg1kf3c0uDdSBJwfa/llkwIjrAGV7j7mVgGNbzTQ3HiHKKDXl6bJPD97w==}
@@ -9301,6 +9348,10 @@ packages:
     dependencies:
       jsesc: 0.5.0
 
+  /remove-accents/0.4.2:
+    resolution: {integrity: sha512-7pXIJqJOq5tFgG1A2Zxti3Ht8jJF337m4sowbuHsW30ZnkQFnDzy9qBNhgzX8ZLW4+UBcXiiR7SwR6pokHsxiA==}
+    dev: true
+
   /request-progress/3.0.0:
     resolution: {integrity: sha512-MnWzEHHaxHO2iWiQuHrUPBi/1WeBf5PkxQqNyNvLl9VAYSdXkP8tQ3pBSeCPD+yw0v0Aq1zosWLz0BdeXpWwZg==}
     dependencies:
@@ -10567,7 +10618,6 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
-    dev: false
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
