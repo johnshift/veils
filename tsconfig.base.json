@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@shared/ui-appbar": ["libs/shared/ui-appbar/src/index.ts"],
-      "@shared/util-common": ["libs/shared/util-common/src/index.ts"]
+      "@shared/util-common/*": ["libs/shared/util-common/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -26,7 +26,6 @@ export const MantineWrapper = (props: Props) => {
     }
   }, [props.colorScheme]);
 
-  console.log('useState colorScheme =', colorScheme);
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
