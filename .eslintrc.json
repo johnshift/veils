@@ -1,7 +1,14 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "extends": [
+    "plugin:unicorn/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
+    "xo",
+    "xo-react/space"
+  ],
+  "plugins": ["unicorn", "@nrwl/nx", "testing-library", "jest-dom"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -15,10 +22,71 @@
               {
                 "sourceTag": "*",
                 "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "type:core",
+                "onlyDependOnLibsWithTags": ["type:core"]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:core", "type:util"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": [
+                  "type:core",
+                  "type:util",
+                  "type:ui"
+                ]
+              },
+              {
+                "sourceTag": "type:data",
+                "onlyDependOnLibsWithTags": [
+                  "type:core",
+                  "type:util",
+                  "type:data"
+                ]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["*"]
               }
             ]
           }
-        ]
+        ],
+        // override xo default
+        "react/react-in-jsx-scope": "off",
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "arrow-function",
+            "unnamedComponents": "arrow-function"
+          }
+        ],
+        "no-unused-expressions": [
+          "error",
+          {
+            "allowTernary": true
+          }
+        ],
+        "dot-notation": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "import/no-anonymous-default-export": "off",
+        // override unicorn lint
+        "unicorn/prefer-module": "off",
+        "unicorn/no-empty-file": "off",
+        "unicorn/filename-case": [
+          "error",
+          {
+            "cases": {
+              "kebabCase": true,
+              "camelCase": true,
+              "pascalCase": true
+            }
+          }
+        ],
+        "unicorn/prevent-abbreviations": "off",
+        "unicorn/no-null": "off"
       }
     },
     {
