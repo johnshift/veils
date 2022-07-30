@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { MantineWrapper } from '@shared/util-common';
+import { MantineWrapper, ReactQueryWrapper } from '@shared/util-common';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
@@ -13,7 +13,9 @@ const App = ({ Component, pageProps }: AppProps) => (
       />
     </Head>
     <MantineWrapper>
-      <Component {...pageProps} />
+      <ReactQueryWrapper>
+        <Component {...pageProps} />
+      </ReactQueryWrapper>
     </MantineWrapper>
   </>
 );
