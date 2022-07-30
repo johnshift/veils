@@ -2,13 +2,17 @@ import React from 'react';
 
 import { useDarkMode } from 'storybook-dark-mode';
 
-import { MantineWrapper } from '@shared/util-common';
+import { Center } from '@mantine/core';
+
+import { MantineWrapper } from '@shared/util-common/mantine';
 
 export const parameters = { layout: 'fullscreen' };
 
 const ThemeWrapper = (props: { children: React.ReactNode }) => (
   <MantineWrapper colorScheme={useDarkMode() ? 'dark' : 'light'}>
-    {props.children}
+    <Center style={{ width: '100vw', height: '100vh' }}>
+      {props.children}
+    </Center>
   </MantineWrapper>
 );
 
