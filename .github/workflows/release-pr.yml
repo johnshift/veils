@@ -1,0 +1,29 @@
+name: Release PR
+
+on:
+  # Execute on push to main branch
+  push:
+    branches:
+      - main
+  # Option to execute manually
+  workflow_dispatch:
+
+# when new push/pr to main, cancel current cicd/release
+concurrency:
+  group: release-pr
+  cancel-in-progress: true
+
+jobs:
+  release:
+    name: Release PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release-please action
+        uses: google-github-actions/release-please-action@v3
+        with:
+          token: ${{ secrets.GA_PAT }}
+          release-type: node
+          package-name: 'veils'
+          bump-minor-pre-major: true
+          pull-request-title-pattern: 'chore: release ${version}'
+          changelog-types: '[{"type":"feat","section":":sparkles: :fire: Features :fire: :sparkles:","hidden":false},{"type":"fix","section":":bug: :axe: Bug Fixes :axe: :bug:","hidden":false},{"type":"test","section":":drop_of_blood: :crossed_swords: Tests :crossed_swords: :drop_of_blood:","hidden":false},{"type":"refactor","section":":computer: Code Changes :computer:","hidden":false},{"type":"chore","section":":toolbox: Maintenance :toolbox:","hidden":false},{"type":"ci","section":":shield: Continuous Integration :shield:","hidden":false},{"docs":"fix","section":":book: Documentation :book:","hidden":false}]'
