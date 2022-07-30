@@ -40,6 +40,7 @@
     "@nrwl/web": "14.5.1",
     "@nrwl/workspace": "14.5.1",
     "@swc/core": "^1.2.173",
+    "@swc/jest": "0.2.20",
     "@tanstack/react-query-devtools": "^4.0.10",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "13.3.0",
