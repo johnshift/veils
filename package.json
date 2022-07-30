@@ -9,7 +9,8 @@
     "test:all": "nx run-many --target=test --all --parallel --codeCoverage",
     "lint": "nx affected:lint --uncommitted --parallel=8",
     "lint:all": "nx run-many --target=lint --all --parallel=8",
-    "nx": "nx"
+    "nx": "nx",
+    "bw": "bundlewatch"
   },
   "private": true,
   "dependencies": {
@@ -71,5 +72,13 @@
     "ts-jest": "27.1.4",
     "ts-node": "~10.8.0",
     "typescript": "~4.7.2"
+  },
+  "bundlewatch": {
+    "files": [
+      {
+        "path": "dist/apps/web/.next/static/chunks/*.js",
+        "maxSize": "50kB"
+      }
+    ]
   }
 }

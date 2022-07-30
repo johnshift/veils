@@ -9,3 +9,6 @@ pnpm build
 
 # run all tests with coverage
 pnpm test:all
+
+# check bundle size
+pnpm bw
