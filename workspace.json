@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "auth-core-login": "libs/auth/core-login",
+    "auth-core-logout": "libs/auth/core-logout",
     "auth-core-session": "libs/auth/core-session",
     "auth-data-login": "libs/auth/data-login",
     "auth-data-session": "libs/auth/data-session",
