@@ -1,5 +1,6 @@
 // Error constants
 export const ERR_LOGIN_FAILED = 'Login failed';
+export const ERR_INCORRECT_LOGIN = 'Incorrect username/email or password';
 
 // Messages
 export const MSG_LOGIN_OK = 'Login successful';
