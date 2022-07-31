@@ -21,6 +21,7 @@
       "@auth/data-login/*": ["libs/auth/data-login/src/lib/*"],
       "@auth/data-session/*": ["libs/auth/data-session/src/lib/*"],
       "@auth/util-test-login": ["libs/auth/util-test-login/src/index.ts"],
+      "@auth/util-test-logout": ["libs/auth/util-test-logout/src/index.ts"],
       "@auth/util-test-session": ["libs/auth/util-test-session/src/index.ts"],
       "@shared/core-common/*": ["libs/shared/core-common/src/lib/*"],
       "@shared/data-testutils": ["libs/shared/data-testutils/src/index.ts"],
