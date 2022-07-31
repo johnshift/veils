@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 
 import { QueryClient } from '@tanstack/react-query';
 
+import { NotificationsProvider } from '@mantine/notifications';
+
 import { MantineWrapper } from '@shared/util-wrappers/mantine';
 import { ReactQueryWrapper } from '@shared/util-wrappers/react-query';
 
@@ -34,6 +36,8 @@ const queryClient = new QueryClient({
 
 export const TestWrapper = ({ children }: Props) => (
   <MantineWrapper>
-    <ReactQueryWrapper client={queryClient}>{children}</ReactQueryWrapper>
+    <ReactQueryWrapper client={queryClient}>
+      <NotificationsProvider>{children}</NotificationsProvider>
+    </ReactQueryWrapper>
   </MantineWrapper>
 );

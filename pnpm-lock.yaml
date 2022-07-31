@@ -11,6 +11,7 @@ specifiers:
   '@mantine/core': ^5.0.2
   '@mantine/hooks': ^5.0.2
   '@mantine/next': ^5.0.2
+  '@mantine/notifications': ^5.0.2
   '@nrwl/cli': 14.5.1
   '@nrwl/cypress': 14.5.1
   '@nrwl/eslint-plugin-nx': 14.5.1
@@ -83,6 +84,7 @@ dependencies:
   '@mantine/core': 5.0.2_8e5d01cce09ff2f7af4c71e58a141d39
   '@mantine/hooks': 5.0.2_react@18.2.0
   '@mantine/next': 5.0.2_f9d158c997d3a21dd260032478ac8228
+  '@mantine/notifications': 5.0.2_2f51c7e8b01d7615a6775bef4cb7fb94
   '@nrwl/next': 14.5.1_f859c225bc485bb79fe0027e93bfa463
   '@tabler/icons': 1.78.1_react-dom@18.2.0+react@18.2.0
   '@tanstack/react-query': 4.0.10_react-dom@18.2.0+react@18.2.0
@@ -3398,6 +3400,22 @@ packages:
     transitivePeerDependencies:
       - '@emotion/react'
       - '@emotion/server'
+    dev: false
+
+  /@mantine/notifications/5.0.2_2f51c7e8b01d7615a6775bef4cb7fb94:
+    resolution: {integrity: sha512-EicBoabJAV2G9y/g+/id76ERfz9ap+veN5rd3gkuYJssYnm98kfbgO73pLLm7ZaacNEGNlqWIIN2OYLcaoQ4Dw==}
+    peerDependencies:
+      '@mantine/core': 5.0.2
+      '@mantine/hooks': 5.0.2
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@mantine/core': 5.0.2_8e5d01cce09ff2f7af4c71e58a141d39
+      '@mantine/hooks': 5.0.2_react@18.2.0
+      '@mantine/utils': 5.0.2_react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-transition-group: 4.4.2_react-dom@18.2.0+react@18.2.0
     dev: false
 
   /@mantine/ssr/5.0.2_2f187be589a94a84ebf16aecb815c473:
@@ -9722,6 +9740,13 @@ packages:
       utila: 0.4.0
     dev: true
 
+  /dom-helpers/5.2.1:
+    resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
+    dependencies:
+      '@babel/runtime': 7.18.9
+      csstype: 3.1.0
+    dev: false
+
   /dom-serializer/0.2.2:
     resolution: {integrity: sha512-2/xPb3ORsQ42nHYiSunXkDjPLBaEj/xTwUO4B7XCZQTRk7EBtTOPaygh10YAAh2OI1Qrp6NWfpAhzswj0ydt9g==}
     dependencies:
@@ -15852,6 +15877,20 @@ packages:
       use-latest: 1.2.1_d9efaa4a57b9ddc48121b447e3437c81
     transitivePeerDependencies:
       - '@types/react'
+    dev: false
+
+  /react-transition-group/4.4.2_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==}
+    peerDependencies:
+      react: '>=16.6.0'
+      react-dom: '>=16.6.0'
+    dependencies:
+      '@babel/runtime': 7.18.9
+      dom-helpers: 5.2.1
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react/18.2.0:
