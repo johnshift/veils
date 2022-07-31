@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "auth-core-login": "libs/auth/core-login",
     "auth-core-session": "libs/auth/core-session",
     "auth-data-session": "libs/auth/data-session",
     "auth-util-test-session": "libs/auth/util-test-session",
