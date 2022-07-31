@@ -4,6 +4,7 @@
   "projects": {
     "auth-core-login": "libs/auth/core-login",
     "auth-core-logout": "libs/auth/core-logout",
+    "auth-core-register": "libs/auth/core-register",
     "auth-core-session": "libs/auth/core-session",
     "auth-data-login": "libs/auth/data-login",
     "auth-data-logout": "libs/auth/data-logout",
