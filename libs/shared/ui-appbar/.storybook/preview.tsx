@@ -4,7 +4,7 @@ import { useDarkMode } from 'storybook-dark-mode';
 
 import { Center } from '@mantine/core';
 
-import { MantineWrapper } from '@shared/util-common/mantine';
+import { MantineWrapper } from '@shared/util-wrappers/mantine';
 
 export const parameters = { layout: 'fullscreen' };
 
