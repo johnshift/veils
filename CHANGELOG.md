@@ -1,5 +1,48 @@
 # Changelog
 
+## [0.0.4](https://github.com/johnshift/veils/compare/v0.0.3...v0.0.4) (2022-07-31)
+
+
+### :toolbox: Maintenance :toolbox:
+
+* add eslint unused-imports deps ([e8fd4dc](https://github.com/johnshift/veils/commit/e8fd4dc92323f55f54f6694da64e1b68dcbc5357))
+* add faker deps ([17483e6](https://github.com/johnshift/veils/commit/17483e66a5efae561039208e018c5b643fda68eb))
+* add msw, whatwg-fetch deps ([21285f0](https://github.com/johnshift/veils/commit/21285f0894e1d8dbba7ecdc53ba0be2cb91878c9))
+* moved mantine, react-query wrappers into shared-util-wrappers lib ([165ac6b](https://github.com/johnshift/veils/commit/165ac6b9e3be5b92280e1b43052687217c72b791))
+* removed unused import and variables ([fd51c2d](https://github.com/johnshift/veils/commit/fd51c2d35a5bcd79c4130fc6d53978370554dfc3))
+* setup auth-core-session lib ([9a5ed58](https://github.com/johnshift/veils/commit/9a5ed58f2e67548f986b86a88442f2ba05bad522))
+* setup auth-data-session lib ([7c064d3](https://github.com/johnshift/veils/commit/7c064d354fe80bfbe17e6c1e67ed05ad996d9d1f))
+* setup auth-util-test-session lib ([de98934](https://github.com/johnshift/veils/commit/de98934ec3b8a1a12f57a6b389a85c6fb6a3b661))
+* setup shared-core-common lib ([52a0604](https://github.com/johnshift/veils/commit/52a06040d364c447d0e95bc8eef186288362a428))
+* setup shared-data-testutils lib ([cd08d8d](https://github.com/johnshift/veils/commit/cd08d8d71a1d68f173fbafbc2d9e313c8f64f460))
+* setup shared-util-common lib ([46a8a33](https://github.com/johnshift/veils/commit/46a8a336b50ff93c4466966510e95b6fa39b0217))
+
+
+### :computer: Code Changes :computer:
+
+* **core-common:** add error internal,network constants ([a66ddba](https://github.com/johnshift/veils/commit/a66ddbaffd55ee9cdf590de4650d0e0cba955aca))
+* **core-common:** add generic response dto ([d6058b7](https://github.com/johnshift/veils/commit/d6058b769b0a5958848e94da07af97d040448d50))
+* **core-session:** add auth session api url ([16f7edc](https://github.com/johnshift/veils/commit/16f7edcd4d71c8a22290d229cd76a22c53f5228b))
+* **core-session:** add empty session object ([7989d2d](https://github.com/johnshift/veils/commit/7989d2dfe2e3fa33563c70721104905086bece82))
+* **core-session:** add session type ([e6dbc4e](https://github.com/johnshift/veils/commit/e6dbc4e2b2eb4a0fe07625fe81d406ee4b8be22e))
+* **data-session:** add session context ([4d2e013](https://github.com/johnshift/veils/commit/4d2e0136c98acfcad72959779cc3df6188603a2f))
+* **data-session:** add session fetch function ([ab1dcc0](https://github.com/johnshift/veils/commit/ab1dcc01c61e482896fa933166eea296d14cd0dc))
+* **data-session:** add session provider ([7a5a442](https://github.com/johnshift/veils/commit/7a5a44237bacacbd556938f255f4955f2fb9a8e4))
+* **data-session:** add session query ([0b759ab](https://github.com/johnshift/veils/commit/0b759ab5358aaf78d180b572ff586e7064d0d0bf))
+* **data-session:** setup test files ([73f15c0](https://github.com/johnshift/veils/commit/73f15c0b6c0ed0578a3fb5adb19bc084ac38971c))
+* **data-testutils:** add custom render + util functions ([d933d0c](https://github.com/johnshift/veils/commit/d933d0c81e34fe2c43498d75bdea6678573a1ac2))
+* **util-common:** add api fetch utility function ([fb2ae11](https://github.com/johnshift/veils/commit/fb2ae1116c78ace90d760bc754d6bcd841d3460a))
+* **util-test-session:** add mock session response ([13cc460](https://github.com/johnshift/veils/commit/13cc460a236eb7a22a6c7908f572775ff262d103))
+* **util-test-session:** add session faker ([6dd80e9](https://github.com/johnshift/veils/commit/6dd80e9a1da3de7788bccf9cc89a2c51b4f70ea8))
+
+
+### :drop_of_blood: :crossed_swords: Tests :crossed_swords: :drop_of_blood:
+
+* **data-session:** add session context unit test ([3aaad6e](https://github.com/johnshift/veils/commit/3aaad6ea0f493e7ddabafe8a882ea797e29f6a56))
+* **data-session:** add session provider unit test ([bf9f74e](https://github.com/johnshift/veils/commit/bf9f74efa106e92dfa59626d980af9c42bf0cb7b))
+* **data-session:** add session query unit test ([5ce000c](https://github.com/johnshift/veils/commit/5ce000cdd72b67c0819115d534a0eb45da0aac64))
+* **util-common:** add api fetch unit tests ([2f4a412](https://github.com/johnshift/veils/commit/2f4a4121df019a15dba3b889e812a10e483846db))
+
 ## [0.0.3](https://github.com/johnshift/veils/compare/v0.0.2...v0.0.3) (2022-07-31)
 
 
