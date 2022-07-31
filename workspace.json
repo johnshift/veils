@@ -8,6 +8,7 @@
     "auth-core-session": "libs/auth/core-session",
     "auth-data-login": "libs/auth/data-login",
     "auth-data-logout": "libs/auth/data-logout",
+    "auth-data-register": "libs/auth/data-register",
     "auth-data-session": "libs/auth/data-session",
     "auth-util-test-login": "libs/auth/util-test-login",
     "auth-util-test-logout": "libs/auth/util-test-logout",
