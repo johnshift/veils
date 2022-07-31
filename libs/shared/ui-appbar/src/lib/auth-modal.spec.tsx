@@ -1,4 +1,4 @@
-import { render, screen, user, waitFor } from '@shared/ui-testutils';
+import { render, screen, user } from '@shared/ui-testutils';
 
 import { AuthModal } from './auth-modal';
 

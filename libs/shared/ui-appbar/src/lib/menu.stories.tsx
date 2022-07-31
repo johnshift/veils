@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 
 import { Menu } from './menu';
 
@@ -11,10 +11,9 @@ export default {
 type Props = {
   isLoading: boolean;
   isLoggedIn: boolean;
-  children: ReactNode;
 };
 
-const MenuWrapper = ({ isLoading, isLoggedIn, children }: Props) => {
+const MenuWrapper = ({ isLoading, isLoggedIn }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const authFn = () => {
