@@ -19,7 +19,7 @@
       "@shared/core-common/*": ["libs/shared/core-common/src/lib/*"],
       "@shared/ui-appbar/*": ["libs/shared/ui-appbar/src/lib/*"],
       "@shared/ui-testutils": ["libs/shared/ui-testutils/src/index.ts"],
-      "@shared/util-common/*": ["libs/shared/util-common/src/*"],
+      "@shared/util-common/*": ["libs/shared/util-common/src/lib/*"],
       "@shared/util-wrappers/*": ["libs/shared/util-wrappers/src/*"]
     }
   },
