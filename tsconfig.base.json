@@ -18,6 +18,7 @@
       "@auth/core-session/*": ["libs/auth/core-session/src/lib/*"],
       "@auth/data-session/*": ["libs/auth/data-session/src/lib/*"],
       "@shared/core-common/*": ["libs/shared/core-common/src/lib/*"],
+      "@shared/data-testutils": ["libs/shared/data-testutils/src/index.ts"],
       "@shared/ui-appbar/*": ["libs/shared/ui-appbar/src/lib/*"],
       "@shared/ui-testutils": ["libs/shared/ui-testutils/src/index.ts"],
       "@shared/util-common/*": ["libs/shared/util-common/src/lib/*"],

@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/data-testutils/src",
+  "projectType": "library",
+  "tags": ["type:data"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/data-testutils/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
