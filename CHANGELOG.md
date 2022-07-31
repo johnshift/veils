@@ -1,5 +1,40 @@
 # Changelog
 
+## [0.0.3](https://github.com/johnshift/veils/compare/v0.0.2...v0.0.3) (2022-07-31)
+
+
+### :toolbox: Maintenance :toolbox:
+
+* add tabler icons deps ([9354d34](https://github.com/johnshift/veils/commit/9354d34b1b76d8b16b033665099caf59e7982f9e))
+* add testing-library user-event deps ([d676b9f](https://github.com/johnshift/veils/commit/d676b9fe5f3eb91045ebf75b6e28d79bf1ece65d))
+* set filename rule to kebab-case ([169603e](https://github.com/johnshift/veils/commit/169603e36d2ebb9f217ee5238d41e5b511f412be))
+* setup shared-ui-testutils lib ([6a32a90](https://github.com/johnshift/veils/commit/6a32a9007c6e99d1b40962f443ab09e09b5eb885))
+
+
+### :computer: Code Changes :computer:
+
+* **ui-appbar:** add auth modal component ([774734d](https://github.com/johnshift/veils/commit/774734db4c16082f7a70729c26ccf7809ead9dc2))
+* **ui-appbar:** add brand component ([6b32fd4](https://github.com/johnshift/veils/commit/6b32fd4d8d9b04e0db1b3b0e118bcab9e86c3f3c))
+* **ui-appbar:** add menu component ([a8c6d3c](https://github.com/johnshift/veils/commit/a8c6d3ce4c6c9fc2838d4a80d4ccc2a4867ebfc2))
+* **ui-appbar:** add theme toggle component ([8d71db8](https://github.com/johnshift/veils/commit/8d71db832349af0b3d93b8026e40bb529a2839a2))
+* **ui-appbar:** implement resize observer for tests ([1746576](https://github.com/johnshift/veils/commit/17465769c03febe676e4ba972f740bca013e957f))
+* **ui-appbar:** setup storybook ([6d05f3a](https://github.com/johnshift/veils/commit/6d05f3accdcea3c1c9dd76612d6d31f583b3a521))
+* **ui-appbar:** update tsconfig path to support tree shaking ([16234e2](https://github.com/johnshift/veils/commit/16234e2bb3415d7a5b8664ead59f651d7ba74f69))
+* **ui-testutils:** add custom render + util functions ([7dc14cb](https://github.com/johnshift/veils/commit/7dc14cbb92829e85989ff671a5f9f21b1faafa5e))
+* **util-common:** rearranged folder structure to support tree shaking ([65a8357](https://github.com/johnshift/veils/commit/65a8357fda674f3908fbf5a6ce401b09664e50dc))
+
+
+### :drop_of_blood: :crossed_swords: Tests :crossed_swords: :drop_of_blood:
+
+* **ui-appbar:** add auth modal story ([c129c2d](https://github.com/johnshift/veils/commit/c129c2d56830357883d287da5dce12f48fdfa084))
+* **ui-appbar:** add auth modal unit test ([f616a0e](https://github.com/johnshift/veils/commit/f616a0e41aafa9783b1cccbe4806addec6ec4668))
+* **ui-appbar:** add brand story ([0880992](https://github.com/johnshift/veils/commit/088099290e4c994b7d4dc4244edafb8d82b7372a))
+* **ui-appbar:** add brand unit test ([d93cb09](https://github.com/johnshift/veils/commit/d93cb09f23287d6626c934f7c20ad7f0e91a2c7e))
+* **ui-appbar:** add menu story ([48224c8](https://github.com/johnshift/veils/commit/48224c86669e936546eb5efc7e7c6c8fc1d010b8))
+* **ui-appbar:** add menu unit test ([03b955b](https://github.com/johnshift/veils/commit/03b955bc42f01950fb3da17ff4e4e312efff8cbe))
+* **ui-appbar:** add theme toggle story ([b0d4d37](https://github.com/johnshift/veils/commit/b0d4d379272a8f4e4f9cdfeb63aaa8601148fdec))
+* **ui-appbar:** add theme toggle unit test ([9df96cb](https://github.com/johnshift/veils/commit/9df96cbe2e2d488ff21b7236b5a838bd2717574c))
+
 ## [0.0.2](https://github.com/johnshift/veils/compare/v0.0.1...v0.0.2) (2022-07-30)
 
 
