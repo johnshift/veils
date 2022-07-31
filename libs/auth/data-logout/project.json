@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/auth/data-logout/src",
+  "projectType": "library",
+  "tags": ["type:data"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/auth/data-logout/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/auth/data-logout"],
+      "options": {
+        "jestConfig": "libs/auth/data-logout/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
