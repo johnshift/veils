@@ -9,6 +9,7 @@ specifiers:
   '@emotion/server': ^11.4.0
   '@faker-js/faker': ^7.3.0
   '@mantine/core': ^5.0.2
+  '@mantine/form': ^5.0.2
   '@mantine/hooks': ^5.0.2
   '@mantine/next': ^5.0.2
   '@mantine/notifications': ^5.0.2
@@ -82,6 +83,7 @@ dependencies:
   '@emotion/react': 11.9.3_61fbe6a1e43d6265055202ba20c5415d
   '@emotion/server': 11.4.0
   '@mantine/core': 5.0.2_8e5d01cce09ff2f7af4c71e58a141d39
+  '@mantine/form': 5.0.2_react@18.2.0
   '@mantine/hooks': 5.0.2_react@18.2.0
   '@mantine/next': 5.0.2_f9d158c997d3a21dd260032478ac8228
   '@mantine/notifications': 5.0.2_2f51c7e8b01d7615a6775bef4cb7fb94
@@ -3375,6 +3377,15 @@ packages:
     transitivePeerDependencies:
       - '@emotion/react'
       - '@types/react'
+    dev: false
+
+  /@mantine/form/5.0.2_react@18.2.0:
+    resolution: {integrity: sha512-VkW16orcIeOpQAdpSuXD2rIv/EVnMUCy00VV7zMhibFcT5j/qO4T0kW2gO4V5lp9xVCZuw1y1WthAdBA/GcQZA==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      klona: 2.0.5
+      react: 18.2.0
     dev: false
 
   /@mantine/hooks/5.0.2_react@18.2.0:
