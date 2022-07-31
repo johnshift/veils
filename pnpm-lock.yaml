@@ -28,6 +28,7 @@ specifiers:
   '@svgr/webpack': ^5.4.0
   '@swc/core': ^1.2.173
   '@swc/jest': 0.2.20
+  '@tabler/icons': ^1.78.1
   '@tanstack/react-query': ^4.0.10
   '@tanstack/react-query-devtools': ^4.0.10
   '@testing-library/jest-dom': ^5.16.4
@@ -79,6 +80,7 @@ dependencies:
   '@mantine/hooks': 5.0.2_react@18.2.0
   '@mantine/next': 5.0.2_f9d158c997d3a21dd260032478ac8228
   '@nrwl/next': 14.5.1_f859c225bc485bb79fe0027e93bfa463
+  '@tabler/icons': 1.78.1_react-dom@18.2.0+react@18.2.0
   '@tanstack/react-query': 4.0.10_react-dom@18.2.0+react@18.2.0
   core-js: 3.24.1
   next: 12.2.3_07d887d3eaac65335aa8efa14d431939
@@ -6230,6 +6232,21 @@ packages:
       '@jest/create-cache-key-function': 27.5.1
       '@swc/core': 1.2.220
     dev: true
+
+  /@tabler/icons/1.78.1_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-QT/94Hufvzn4PxsEyN9NTh96XmNaGGgMh7sKcBZ2216pE9B+Ala98KpdNwTKKBlEvRvHw9y14zW4qFYzxGOhZw==}
+    peerDependencies:
+      react: ^16.x || 17.x || 18.x
+      react-dom: ^16.x || 17.x || 18.x
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /@tanstack/match-sorter-utils/8.1.1:
     resolution: {integrity: sha512-IdmEekEYxQsoLOR0XQyw3jD1GujBpRRYaGJYQUw1eOT1eUugWxdc7jomh1VQ1EKHcdwDLpLaCz/8y4KraU4T9A==}

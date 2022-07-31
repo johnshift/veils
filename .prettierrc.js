@@ -9,7 +9,7 @@ module.exports = {
   importOrder: [
     '^(next|react|react-query|@storybook/(.*))$',
     '<THIRD_PARTY_MODULES>',
-    '^@(mantine|react-icons)/(.*)$',
+    '^@(mantine|tabler)/(.*)$',
     '(@testing-library/(.*)|whatwg-fetch)$',
     '^@(auth|shared)/(.*)$',
     '^[./]',
