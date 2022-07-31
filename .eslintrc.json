@@ -8,7 +8,13 @@
     "xo",
     "xo-react/space"
   ],
-  "plugins": ["unicorn", "@nrwl/nx", "testing-library", "jest-dom"],
+  "plugins": [
+    "unicorn",
+    "unused-imports",
+    "@nrwl/nx",
+    "testing-library",
+    "jest-dom"
+  ],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -84,7 +90,17 @@
           }
         ],
         "unicorn/prevent-abbreviations": "off",
-        "unicorn/no-null": "off"
+        "unicorn/no-null": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "varsIgnorePattern": "^_",
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+          }
+        ]
       }
     },
     {
