@@ -1,5 +1,48 @@
 # Changelog
 
+## [0.0.5](https://github.com/johnshift/veils/compare/v0.0.4...v0.0.5) (2022-07-31)
+
+
+### :toolbox: Maintenance :toolbox:
+
+* add mantine notifications ([10860f0](https://github.com/johnshift/veils/commit/10860f04dca0ded9d5c66b9be7d377ea7e677386))
+* setup auth-core-login lib ([835b718](https://github.com/johnshift/veils/commit/835b7182963cd4334737fc68e9db17c7792f2430))
+* setup auth-core-logout lib ([2ea656c](https://github.com/johnshift/veils/commit/2ea656c800e984ea0f75f2bf8d72c5e8955dec5f))
+* setup auth-data-login lib ([0d06256](https://github.com/johnshift/veils/commit/0d062560d0cadc783a1c242eeab5842e94d17444))
+* setup auth-data-logout lib ([264306f](https://github.com/johnshift/veils/commit/264306fe44026102d0bcd33a627a165c61c8fe42))
+* setup auth-data-register lib ([a276d0a](https://github.com/johnshift/veils/commit/a276d0ac4cbca2a4a50ca34176016c6188fee7dc))
+* setup auth-register-core lib ([f548152](https://github.com/johnshift/veils/commit/f5481529b02ea146b05fd714781c75546b7163b0))
+* setup auth-util-test-login lib ([7b51cf1](https://github.com/johnshift/veils/commit/7b51cf1423d83c726f54f61b4d20d2ad29382729))
+* setup auth-util-test-logout lib ([3ed5473](https://github.com/johnshift/veils/commit/3ed54734040ba4a5a8f791ff47945acad87ba3e3))
+* setup auth-util-test-register lib ([4bfb218](https://github.com/johnshift/veils/commit/4bfb2184c7f1cd2625fb6f6eb602a7c3857dd2c9))
+
+
+### :computer: Code Changes :computer:
+
+* **core-login:** add incorrect login error constant ([4924cc5](https://github.com/johnshift/veils/commit/4924cc55654833fe4cd028bbb298dd957fe15f36))
+* **core-login:** add login constants ([49fd42c](https://github.com/johnshift/veils/commit/49fd42c033fd6e9aadffc80d071b956b03a7f8ef))
+* **core-login:** add login dto ([e4095c1](https://github.com/johnshift/veils/commit/e4095c1fdf58bff7ac56fe7d7f3fa892e858a4b6))
+* **core-logout:** add logout constants ([2b099cb](https://github.com/johnshift/veils/commit/2b099cb6a998a018a9d1a2544c7999158ddaf3e3))
+* **core-register:** add register constants ([433f3bf](https://github.com/johnshift/veils/commit/433f3bf892fe2067d3c7136669003dcff28ce96f))
+* **core-register:** add register dtos ([50cd7ae](https://github.com/johnshift/veils/commit/50cd7ae8a69b9809758c64447f0f5ea69a6d50c2))
+* **core-register:** add register field error enum ([14e846c](https://github.com/johnshift/veils/commit/14e846cadd45e28a5da6d53ced3648a80ae9b739))
+* **data-login:** add login mutation hook ([b93a903](https://github.com/johnshift/veils/commit/b93a90365c207e7b0bf990409e891611ec64fae6))
+* **data-logout:** add logout mutation ([eda678b](https://github.com/johnshift/veils/commit/eda678ba0017ad957a33dbe7c44e761809251806))
+* **data-register:** add register mutation fn ([60656ba](https://github.com/johnshift/veils/commit/60656ba40c8a6d58c44071e9ce57e1348f840d31))
+* **data-register:** add register mutation hook ([43e2324](https://github.com/johnshift/veils/commit/43e23246d82d28d9f9053c30401419ec6ea4cdbc))
+* **util-test-login:** add login payload faker ([e8885fd](https://github.com/johnshift/veils/commit/e8885fdf293f868fa3b9d42abe9f959c5f937ca4))
+* **util-test-login:** add mock login response ([a4110fe](https://github.com/johnshift/veils/commit/a4110fec59fab0d88975fc26629ec2c4ed764064))
+* **util-test-logout:** add mock logout response ([36e5276](https://github.com/johnshift/veils/commit/36e52765b42323c863eeadd79a62cbf824f06c17))
+* **util-test-register:** add mock register response ([37ab853](https://github.com/johnshift/veils/commit/37ab8533c082cb0e30fd83b0f2d81e39ad8ad8cc))
+* **util-test-register:** add register payload faker ([948fb49](https://github.com/johnshift/veils/commit/948fb49c827f7f9e4248673fee647815f59b81e9))
+
+
+### :drop_of_blood: :crossed_swords: Tests :crossed_swords: :drop_of_blood:
+
+* **data-login:** add login mutation unit tests ([4a236bc](https://github.com/johnshift/veils/commit/4a236bc476434139b4df765d713e7978dcc83b07))
+* **data-logout:** add logout mutation unit test ([0f211a0](https://github.com/johnshift/veils/commit/0f211a0e6ff1485f73af35a608ad8f22a2e305b5))
+* **data-register:** add register mutation hook unit test ([977f0d2](https://github.com/johnshift/veils/commit/977f0d2200c80cde9bba2154f8a3b42f32dc3bc8))
+
 ## [0.0.4](https://github.com/johnshift/veils/compare/v0.0.3...v0.0.4) (2022-07-31)
 
 
