@@ -4,6 +4,7 @@
   "projects": {
     "auth-core-login": "libs/auth/core-login",
     "auth-core-session": "libs/auth/core-session",
+    "auth-data-login": "libs/auth/data-login",
     "auth-data-session": "libs/auth/data-session",
     "auth-util-test-session": "libs/auth/util-test-session",
     "shared-core-common": "libs/shared/core-common",

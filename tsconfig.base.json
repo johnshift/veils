@@ -17,6 +17,7 @@
     "paths": {
       "@auth/core-login/*": ["libs/auth/core-login/src/lib/*"],
       "@auth/core-session/*": ["libs/auth/core-session/src/lib/*"],
+      "@auth/data-login/*": ["libs/auth/data-login/src/lib/*"],
       "@auth/data-session/*": ["libs/auth/data-session/src/lib/*"],
       "@auth/util-test-session": ["libs/auth/util-test-session/src/index.ts"],
       "@shared/core-common/*": ["libs/shared/core-common/src/lib/*"],
