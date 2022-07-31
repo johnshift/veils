@@ -26,6 +26,7 @@
       "@auth/feature-login-modal/*": [
         "libs/auth/feature-login-modal/src/lib/*"
       ],
+      "@auth/ui-login-form/*": ["libs/auth/ui-login-form/src/lib/*"],
       "@auth/util-test-login": ["libs/auth/util-test-login/src/index.ts"],
       "@auth/util-test-logout": ["libs/auth/util-test-logout/src/index.ts"],
       "@auth/util-test-register": ["libs/auth/util-test-register/src/index.ts"],

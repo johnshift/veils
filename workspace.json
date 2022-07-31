@@ -11,6 +11,7 @@
     "auth-data-register": "libs/auth/data-register",
     "auth-data-session": "libs/auth/data-session",
     "auth-feature-login-modal": "libs/auth/feature-login-modal",
+    "auth-ui-login-form": "libs/auth/ui-login-form",
     "auth-util-test-login": "libs/auth/util-test-login",
     "auth-util-test-logout": "libs/auth/util-test-logout",
     "auth-util-test-register": "libs/auth/util-test-register",
