@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/auth/data-session/src",
+  "projectType": "library",
+  "tags": ["type:data"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/auth/data-session/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/auth/data-session"],
+      "options": {
+        "jestConfig": "libs/auth/data-session/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
