@@ -4,6 +4,7 @@
   "projects": {
     "auth-core-session": "libs/auth/core-session",
     "auth-data-session": "libs/auth/data-session",
+    "auth-util-test-session": "libs/auth/util-test-session",
     "shared-core-common": "libs/shared/core-common",
     "shared-data-testutils": "libs/shared/data-testutils",
     "shared-ui-appbar": "libs/shared/ui-appbar",
