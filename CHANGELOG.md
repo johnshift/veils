@@ -1,5 +1,36 @@
 # Changelog
 
+## [0.1.0](https://github.com/johnshift/veils/compare/v0.0.6...v0.1.0) (2022-08-01)
+
+
+### :sparkles: :fire: Features :fire: :sparkles:
+
+* login modal ([fc1ae1f](https://github.com/johnshift/veils/commit/fc1ae1f03b5bec078ebabfe3a86fbefc3f5c1dda))
+
+
+### :toolbox: Maintenance :toolbox:
+
+* add msw-storybook-addon deps ([c385000](https://github.com/johnshift/veils/commit/c38500030a5154ea1467b0362c4fc27c6b32829e))
+* setup shared-feature-testutils lib ([e0cf4d4](https://github.com/johnshift/veils/commit/e0cf4d403157aae72f8c29885f39582d8c0aa4b7))
+
+
+### :computer: Code Changes :computer:
+
+* **data-session:** add login modal controls to session ([16fa420](https://github.com/johnshift/veils/commit/16fa420de874c6f7b4c3aa2d95583663080cc163))
+* **data-testutils:** add user event reexport ([3a458eb](https://github.com/johnshift/veils/commit/3a458ebfd856c0a2e754f5c44847d8bc0430cae9))
+* **feature-login-modal:** setup storybook config ([5710f5d](https://github.com/johnshift/veils/commit/5710f5d7baa2bf33b58027b9cf79b03cd5828d25))
+* **feature-testutils:** add custom render ([47cb227](https://github.com/johnshift/veils/commit/47cb227c1e8d69b89412132d571286912e65ddaf))
+* **ui-login-form:** removed isLoading prop (now uses loading overlay in parent) ([b95049f](https://github.com/johnshift/veils/commit/b95049f7295b71d656e26c5ef658a603c5145f91))
+* **util-common:** add use notify hook ([2642123](https://github.com/johnshift/veils/commit/26421230c72ca4a309f9f9bc653354ff215ddef2))
+* **util-common:** fix test title typo ([40899fe](https://github.com/johnshift/veils/commit/40899feaa1af753909419c8e02d99ff7dbfe3701))
+
+
+### :drop_of_blood: :crossed_swords: Tests :crossed_swords: :drop_of_blood:
+
+* **feature-login-modal:** add login form stories ([2d37d8e](https://github.com/johnshift/veils/commit/2d37d8e4e266529f76556e48169eab9f61ba865d))
+* **feature-login-modal:** add login form unit test ([3472df1](https://github.com/johnshift/veils/commit/3472df1695103f6a0be6c537e114c4eba76556cf))
+* **util-common:** add use notify unit test ([2d0b676](https://github.com/johnshift/veils/commit/2d0b6767311c5d1747d2bb806aa493325afcd0b3))
+
 ## [0.0.6](https://github.com/johnshift/veils/compare/v0.0.5...v0.0.6) (2022-08-01)
 
 
