@@ -22,12 +22,11 @@ import { useLoginForm } from './hooks/use-login-form';
 type Props = {
   // FakeLoadingMs determines the delay for validation error notification
   // This provides option to cut delay during tests. Defaults to 1000.
-  fakeLoadingMs?: number;
+  fakeLoadingMs: number;
 };
 
-export const LoginModal = ({ fakeLoadingMs = 1000 }: Props) => {
+export const LoginModal = ({ fakeLoadingMs }: Props) => {
   const { openedLoginModal, closeLoginModal } = useSessionContext();
-
   const {
     closeModal,
     principalInputProps,
@@ -46,11 +45,11 @@ export const LoginModal = ({ fakeLoadingMs = 1000 }: Props) => {
       padding={0}
       onClose={closeModal}
     >
-      <Paper withBorder radius="md" p="xl">
+      <Paper withBorder radius="md" p="xl" data-testid="login-paper">
         <LoadingOverlay
           visible={isLoading}
-          overlayBlur={0.5}
-          data-testid="login loading overlay"
+          // OverlayBlur={0.5}
+          data-testid="login-loading-overlay"
         />
         <Stack justify="space-between" spacing="lg">
           <form onSubmit={onSubmit}>
@@ -69,7 +68,9 @@ export const LoginModal = ({ fakeLoadingMs = 1000 }: Props) => {
                 onChange={passwordInputProps.onChange}
               />
 
-              <Button type="submit">Login</Button>
+              <Button type="submit" aria-label="submit login">
+                Login
+              </Button>
             </Stack>
           </form>
 
