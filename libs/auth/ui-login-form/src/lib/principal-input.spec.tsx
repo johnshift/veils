@@ -6,19 +6,12 @@ import { PrincipalInput } from './principal-input';
 describe('PrincipalInput', () => {
   test('default', async () => {
     // Arrange props
-    const isLoading = false;
+
     const isInvalid = false;
     const value = '';
     const onChange = jest.fn();
 
-    render(
-      <PrincipalInput
-        isLoading={isLoading}
-        isInvalid={isInvalid}
-        value={value}
-        onChange={onChange}
-      />,
-    );
+    render(<PrincipalInput isInvalid={isInvalid} value={value} onChange={onChange} />);
 
     // Assert default
     const input = screen.getByPlaceholderText(PLACEHOLDER_PRINCIPAL);
@@ -33,41 +26,14 @@ describe('PrincipalInput', () => {
     expect(onChange).toHaveBeenCalledTimes(5);
   });
 
-  test('isLoading', async () => {
-    // Arrange props
-    const isLoading = true;
-    const isInvalid = false;
-    const value = '';
-    const onChange = jest.fn();
-
-    render(
-      <PrincipalInput
-        isLoading={isLoading}
-        isInvalid={isInvalid}
-        value={value}
-        onChange={onChange}
-      />,
-    );
-
-    // Assert disabled
-    expect(screen.getByPlaceholderText(PLACEHOLDER_PRINCIPAL)).toBeDisabled();
-  });
-
   test('isInvalid', async () => {
     // Arrange props
-    const isLoading = false;
+
     const isInvalid = true;
     const value = '';
     const onChange = jest.fn();
 
-    render(
-      <PrincipalInput
-        isLoading={isLoading}
-        isInvalid={isInvalid}
-        value={value}
-        onChange={onChange}
-      />,
-    );
+    render(<PrincipalInput isInvalid={isInvalid} value={value} onChange={onChange} />);
 
     // Assert disabled
     expect(screen.getByPlaceholderText(PLACEHOLDER_PRINCIPAL)).toHaveAttribute(

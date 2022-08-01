@@ -9,19 +9,16 @@ import {
 } from '@auth/core-login/constants';
 
 type Props = {
-  isLoading: boolean;
   isInvalid: boolean;
   value: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
 };
 
-export const PasswordInput = ({ isLoading, isInvalid, value, onChange }: Props) => (
+export const PasswordInput = ({ isInvalid, value, onChange }: Props) => (
   <BasePasswordInput
     required
-    label={PLACEHOLDER_PASSWORD}
     placeholder={PLACEHOLDER_PASSWORD}
     error={isInvalid}
-    disabled={isLoading}
     value={value}
     visibilityToggleIcon={({ reveal, size }) => (
       <div data-testid={TESTID_PASSWORD_VISIBILITY}>

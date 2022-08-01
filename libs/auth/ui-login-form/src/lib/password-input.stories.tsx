@@ -7,14 +7,8 @@ import { useEffect } from 'react';
 import { Box } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
-import {
-  ERR_INCORRECT_LOGIN,
-  ERR_LOGIN_FAILED,
-  PLACEHOLDER_PASSWORD,
-} from '@auth/core-login/constants';
+import { PLACEHOLDER_PASSWORD } from '@auth/core-login/constants';
 import { LoginPayload } from '@auth/core-login/dto';
-import { MSG_PLEASE_WAIT } from '@shared/core-common/constants';
-import { useNotifyLoading } from '@shared/util-common/notify/use-notify-loading';
 
 import { PasswordInput } from './password-input';
 import { validatePassword } from './validation/validate-password';
@@ -24,21 +18,11 @@ export default {
   component: PasswordInput,
 } as ComponentMeta<typeof PasswordInput>;
 
-type Props = {
-  isLoading: boolean;
-  fakeLoadingMs: number;
-};
-
 // Wrapper best approximates hook used in login-form container
-const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
+const Wrapper = () => {
   // For login, we only give ambiguous error message
   // isRed is the indicator for an error in validation or mutation
   const [isRed, setIsRed] = useState(false);
-
-  // We want login to remain as ambiguous as possible (for security)
-  // But validation happens instantly, so we impolement
-  // fakeLoading to give a sense of an actual request
-  const [fakeLoading, setFakeLoading] = useState(false);
 
   const {
     errors: formErrors,
@@ -62,17 +46,9 @@ const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
     }
   }, [formValues, formErrors, isRed]);
 
-  const { notifyLoading, notifyError } = useNotifyLoading();
-
   const handleError = (errors: typeof formErrors) => {
     if (errors['password'] || errors['password']) {
-      setFakeLoading(true);
-      notifyLoading(MSG_PLEASE_WAIT);
-      setTimeout(() => {
-        setIsRed(true);
-        notifyError(ERR_LOGIN_FAILED, ERR_INCORRECT_LOGIN);
-        setFakeLoading(false);
-      }, fakeLoadingMs);
+      setIsRed(true);
     }
   };
 
@@ -88,7 +64,6 @@ const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
     <form onSubmit={onSubmit(handleSubmit, handleError)}>
       <Box sx={{ minWidth: '32ch' }}>
         <PasswordInput
-          isLoading={isLoading || fakeLoading}
           isInvalid={isRed}
           value={passwordInputProps.value}
           onChange={passwordInputProps.onChange}
@@ -98,7 +73,7 @@ const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
   );
 };
 
-const Template: ComponentStory<typeof Wrapper> = (args) => <Wrapper {...args} />;
+const Template: ComponentStory<typeof Wrapper> = () => <Wrapper />;
 
 export const Default = Template.bind({});
 Default.play = async ({ canvasElement }) => {

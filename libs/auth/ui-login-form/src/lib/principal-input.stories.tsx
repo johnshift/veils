@@ -6,14 +6,8 @@ import { useEffect } from 'react';
 
 import { useForm } from '@mantine/form';
 
-import {
-  ERR_INCORRECT_LOGIN,
-  ERR_LOGIN_FAILED,
-  PLACEHOLDER_PRINCIPAL,
-} from '@auth/core-login/constants';
+import { PLACEHOLDER_PRINCIPAL } from '@auth/core-login/constants';
 import { LoginPayload } from '@auth/core-login/dto';
-import { MSG_PLEASE_WAIT } from '@shared/core-common/constants';
-import { useNotifyLoading } from '@shared/util-common/notify/use-notify-loading';
 
 import { PrincipalInput } from './principal-input';
 import { validatePrincipal } from './validation/validate-principal';
@@ -23,21 +17,11 @@ export default {
   component: PrincipalInput,
 } as ComponentMeta<typeof PrincipalInput>;
 
-type Props = {
-  isLoading: boolean;
-  fakeLoadingMs: number;
-};
-
 // Wrapper best approximates hook used in login-form container
-const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
+const Wrapper = () => {
   // For login, we only give ambiguous error message
   // isRed is the indicator for an error in validation or mutation
   const [isRed, setIsRed] = useState(false);
-
-  // We want login to remain as ambiguous as possible (for security)
-  // But validation happens instantly, so we impolement
-  // fakeLoading to give a sense of an actual request
-  const [fakeLoading, setFakeLoading] = useState(false);
 
   const {
     errors: formErrors,
@@ -61,17 +45,9 @@ const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
     }
   }, [formValues, formErrors, isRed]);
 
-  const { notifyLoading, notifyError } = useNotifyLoading();
-
   const handleError = (errors: typeof formErrors) => {
-    if (errors['principal'] || errors['password']) {
-      setFakeLoading(true);
-      notifyLoading(MSG_PLEASE_WAIT);
-      setTimeout(() => {
-        setIsRed(true);
-        notifyError(ERR_LOGIN_FAILED, ERR_INCORRECT_LOGIN);
-        setFakeLoading(false);
-      }, fakeLoadingMs);
+    if (errors['principal'] || errors['principal']) {
+      setIsRed(true);
     }
   };
 
@@ -86,7 +62,6 @@ const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
   return (
     <form onSubmit={onSubmit(handleSubmit, handleError)}>
       <PrincipalInput
-        isLoading={isLoading || fakeLoading}
         isInvalid={isRed}
         value={principalInputProps.value}
         onChange={principalInputProps.onChange}
@@ -95,7 +70,7 @@ const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
   );
 };
 
-const Template: ComponentStory<typeof Wrapper> = (args) => <Wrapper {...args} />;
+const Template: ComponentStory<typeof Wrapper> = () => <Wrapper />;
 
 export const Default = Template.bind({});
 

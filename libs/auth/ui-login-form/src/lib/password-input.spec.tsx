@@ -9,19 +9,12 @@ import { PasswordInput } from './password-input';
 describe('PasswordInput', () => {
   test('default', async () => {
     // Arrange props
-    const isLoading = false;
+
     const isInvalid = false;
     const value = '';
     const onChange = jest.fn();
 
-    render(
-      <PasswordInput
-        isLoading={isLoading}
-        isInvalid={isInvalid}
-        value={value}
-        onChange={onChange}
-      />,
-    );
+    render(<PasswordInput isInvalid={isInvalid} value={value} onChange={onChange} />);
 
     // Assert default
     const input = screen.getByPlaceholderText(PLACEHOLDER_PASSWORD);
@@ -43,41 +36,14 @@ describe('PasswordInput', () => {
     expect(input).toHaveAttribute('type', 'password');
   });
 
-  test('isLoading', async () => {
-    // Arrange props
-    const isLoading = true;
-    const isInvalid = false;
-    const value = '';
-    const onChange = jest.fn();
-
-    render(
-      <PasswordInput
-        isLoading={isLoading}
-        isInvalid={isInvalid}
-        value={value}
-        onChange={onChange}
-      />,
-    );
-
-    // Assert disabled
-    expect(screen.getByPlaceholderText(PLACEHOLDER_PASSWORD)).toBeDisabled();
-  });
-
   test('isInvalid', async () => {
     // Arrange props
-    const isLoading = false;
+
     const isInvalid = true;
     const value = '';
     const onChange = jest.fn();
 
-    render(
-      <PasswordInput
-        isLoading={isLoading}
-        isInvalid={isInvalid}
-        value={value}
-        onChange={onChange}
-      />,
-    );
+    render(<PasswordInput isInvalid={isInvalid} value={value} onChange={onChange} />);
 
     // Assert disabled
     expect(screen.getByPlaceholderText(PLACEHOLDER_PASSWORD).parentNode).toBeInvalid();
