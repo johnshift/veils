@@ -1,7 +1,7 @@
 import { setupServer } from 'msw/node';
 
 import { fakeSession, mockSessionResponse } from '@auth/util-test-session';
-import { render, screen, waitFor } from '@shared/data-testutils';
+import { render, screen, user, waitFor } from '@shared/data-testutils';
 
 import { useSessionContext } from '../context/session-context';
 import { SessionProvider } from './session-provider';
@@ -29,6 +29,9 @@ describe('SessionProvider', () => {
         avatar,
         veilAvatar,
         isLoading,
+        openedLoginModal,
+        openLoginModal,
+        closeLoginModal,
       } = useSessionContext();
 
       return (
@@ -41,6 +44,13 @@ describe('SessionProvider', () => {
           <p data-testid="avatar">{avatar}</p>
           <p data-testid="veilAvatar">{veilAvatar}</p>
           <p data-testid="isLoading">{isLoading.toString()}</p>
+          <p data-testid="openedLoginModal">{openedLoginModal.toString()}</p>
+          <button type="button" onClick={openLoginModal}>
+            openLoginModal
+          </button>
+          <button type="button" onClick={closeLoginModal}>
+            closeLoginModal
+          </button>
         </>
       );
     };
@@ -66,5 +76,18 @@ describe('SessionProvider', () => {
     expect(screen.getByTestId('avatar')).toHaveTextContent(body.avatar);
     expect(screen.getByTestId('veilAvatar')).toHaveTextContent(body.veilAvatar);
     expect(screen.getByTestId('isLoading')).toHaveTextContent('false');
+    expect(screen.getByTestId('openedLoginModal')).toHaveTextContent('false');
+
+    // Assert open login modal
+    await user.click(screen.getByRole('button', { name: 'openLoginModal' }));
+    await waitFor(() => {
+      expect(screen.getByTestId('openedLoginModal')).toHaveTextContent('true');
+    });
+
+    // Assert close login modal
+    await user.click(screen.getByRole('button', { name: 'closeLoginModal' }));
+    await waitFor(() => {
+      expect(screen.getByTestId('openedLoginModal')).toHaveTextContent('false');
+    });
   });
 });

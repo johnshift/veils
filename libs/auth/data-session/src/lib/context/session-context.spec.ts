@@ -17,6 +17,9 @@ describe('SessionContext', () => {
       avatar,
       veilAvatar,
       isLoading,
+      openedLoginModal,
+      openLoginModal,
+      closeLoginModal,
     } = result.current;
 
     expect(id).toBeFalsy();
@@ -27,5 +30,8 @@ describe('SessionContext', () => {
     expect(avatar).toBeFalsy();
     expect(veilAvatar).toBeFalsy();
     expect(isLoading).toBeFalsy();
+    expect(openedLoginModal).toBeFalsy();
+    expect(openLoginModal()).toBeNull();
+    expect(closeLoginModal()).toBeNull();
   });
 });
