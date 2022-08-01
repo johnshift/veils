@@ -12,7 +12,7 @@ jest.mock('@mantine/notifications', () => ({
   ...jest.requireActual('@mantine/notifications'),
 }));
 
-describe('notifyLogin', () => {
+describe('useNotifyLoading', () => {
   test('ok', async () => {
     // Render hook
     const { result } = renderHook(() => useNotifyLoading(), {
