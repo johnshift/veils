@@ -23,9 +23,7 @@
       "@auth/data-logout/*": ["libs/auth/data-logout/src/lib/*"],
       "@auth/data-register/*": ["libs/auth/data-register/src/lib/*"],
       "@auth/data-session/*": ["libs/auth/data-session/src/lib/*"],
-      "@auth/feature-login-modal/*": [
-        "libs/auth/feature-login-modal/src/lib/*"
-      ],
+      "@auth/feature-login-modal/*": ["libs/auth/feature-login-modal/src/lib/*"],
       "@auth/ui-login-form/*": ["libs/auth/ui-login-form/src/lib/*"],
       "@auth/util-test-login": ["libs/auth/util-test-login/src/index.ts"],
       "@auth/util-test-logout": ["libs/auth/util-test-logout/src/index.ts"],
@@ -33,6 +31,7 @@
       "@auth/util-test-session": ["libs/auth/util-test-session/src/index.ts"],
       "@shared/core-common/*": ["libs/shared/core-common/src/lib/*"],
       "@shared/data-testutils": ["libs/shared/data-testutils/src/index.ts"],
+      "@shared/feature-testutils": ["libs/shared/feature-testutils/src/index.ts"],
       "@shared/ui-appbar/*": ["libs/shared/ui-appbar/src/lib/*"],
       "@shared/ui-testutils": ["libs/shared/ui-testutils/src/index.ts"],
       "@shared/util-common/*": ["libs/shared/util-common/src/lib/*"],
