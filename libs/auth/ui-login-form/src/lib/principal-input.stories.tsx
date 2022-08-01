@@ -8,9 +8,9 @@ import { useForm } from '@mantine/form';
 
 import { PLACEHOLDER_PRINCIPAL } from '@auth/core-login';
 import type { LoginPayload } from '@auth/core-login';
+import { validatePrincipal } from '@auth/util-login';
 
 import { PrincipalInput } from './principal-input';
-import { validatePrincipal } from './validation/validate-principal';
 
 export default {
   title: 'auth/ui-login-form/PrincipalInput',

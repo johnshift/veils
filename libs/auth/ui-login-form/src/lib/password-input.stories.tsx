@@ -9,9 +9,9 @@ import { useForm } from '@mantine/form';
 
 import { PLACEHOLDER_PASSWORD } from '@auth/core-login';
 import type { LoginPayload } from '@auth/core-login';
+import { validatePassword } from '@auth/util-login';
 
 import { PasswordInput } from './password-input';
-import { validatePassword } from './validation/validate-password';
 
 export default {
   title: 'auth/ui-login-form/PasswordInput',

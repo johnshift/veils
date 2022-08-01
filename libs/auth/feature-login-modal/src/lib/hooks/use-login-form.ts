@@ -10,7 +10,7 @@ import { useForm } from '@mantine/form';
 import { ERR_INCORRECT_LOGIN, ERR_LOGIN_FAILED } from '@auth/core-login';
 import type { LoginPayload } from '@auth/core-login';
 import { useLoginMutation } from '@auth/data-login';
-import { validatePassword, validatePrincipal } from '@auth/ui-login-form';
+import { validatePassword, validatePrincipal } from '@auth/util-login';
 import { useNotify } from '@shared/util-common';
 
 // We need type `InputProps` since we only need value and onChange fields
