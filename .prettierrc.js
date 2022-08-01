@@ -6,6 +6,7 @@ module.exports = {
   arrowParens: 'always',
   tabWidth: 2,
   useTabs: false,
+  printWidth: 90,
   importOrder: [
     '^(next|react|react-query|@storybook/(.*))$',
     '<THIRD_PARTY_MODULES>',
