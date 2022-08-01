@@ -1,4 +1,4 @@
-import { Dispatch, DispatchWithoutAction, SetStateAction } from 'react';
+import { DispatchWithoutAction } from 'react';
 
 import { Menu as BaseMenu, Burger, Loader } from '@mantine/core';
 import { IconLogin } from '@tabler/icons';
@@ -7,7 +7,8 @@ type Props = {
   isOpen: boolean;
   isLoading: boolean;
   isLoggedIn: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  onOpen: DispatchWithoutAction;
+  onClose: DispatchWithoutAction;
   authFn: DispatchWithoutAction;
 };
 
@@ -15,7 +16,8 @@ export const Menu = ({
   isOpen,
   isLoading,
   isLoggedIn,
-  setIsOpen,
+  onOpen,
+  onClose,
   authFn,
 }: Props) => (
   <BaseMenu
@@ -24,7 +26,8 @@ export const Menu = ({
     opened={isOpen}
     position="bottom-end"
     aria-label={`${isOpen ? 'close' : 'open'} appbar menu`}
-    onChange={setIsOpen}
+    onOpen={onOpen}
+    onClose={onClose}
   >
     <BaseMenu.Target>
       <Burger opened={isOpen} />
