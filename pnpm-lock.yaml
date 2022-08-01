@@ -67,6 +67,7 @@ specifiers:
   eslint-plugin-unused-imports: ^2.0.0
   jest: 27.5.1
   msw: ^0.44.2
+  msw-storybook-addon: ^1.6.3
   next: 12.2.3
   nx: 14.5.1
   prettier: ^2.6.2
@@ -158,6 +159,7 @@ devDependencies:
   eslint-plugin-unused-imports: 2.0.0_1e030b3dd861127e7f494c57ccc447e7
   jest: 27.5.1_ts-node@10.8.2
   msw: 0.44.2_typescript@4.7.4
+  msw-storybook-addon: 1.6.3_14c7dfe1c447c43791613198e6d46b60
   nx: 14.5.1_@swc+core@1.2.220
   prettier: 2.7.1
   react-test-renderer: 18.2.0_react@18.2.0
@@ -14256,6 +14258,19 @@ packages:
 
   /ms/2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
+  /msw-storybook-addon/1.6.3_14c7dfe1c447c43791613198e6d46b60:
+    resolution: {integrity: sha512-Ps80WdRmXsmenoTwfrgKMNpQD8INUUFyUFyZOecx8QjuqSlL++UYrLaGyACXN2goOn+/VS6rb0ZapbjrasPClg==}
+    peerDependencies:
+      msw: '>=0.35.0 <1.0.0'
+    dependencies:
+      '@storybook/addons': 6.5.9_react-dom@18.2.0+react@18.2.0
+      is-node-process: 1.0.1
+      msw: 0.44.2_typescript@4.7.4
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: true
 
   /msw/0.44.2_typescript@4.7.4:
     resolution: {integrity: sha512-u8wjzzcMWouoZtuIShCwx4M3wFF5sBAV1f8K4a0WX8kiihFjzl89IKE1VYmTclLyMIwpOq8qQ1HTpuh2BFX/3A==}

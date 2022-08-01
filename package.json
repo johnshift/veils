@@ -88,6 +88,7 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "jest": "27.5.1",
     "msw": "^0.44.2",
+    "msw-storybook-addon": "^1.6.3",
     "nx": "14.5.1",
     "prettier": "^2.6.2",
     "react-test-renderer": "18.2.0",
@@ -105,5 +106,8 @@
         "maxSize": "50kB"
       }
     ]
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
