@@ -9,3 +9,4 @@ export const REGEX_NAME = /^[A-Za-z]+$/;
 
 // Messages
 export const MSG_LOADING = 'Loading';
+export const MSG_PLEASE_WAIT = 'Please wait';
