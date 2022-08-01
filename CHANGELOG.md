@@ -1,5 +1,46 @@
 # Changelog
 
+## [0.0.6](https://github.com/johnshift/veils/compare/v0.0.5...v0.0.6) (2022-08-01)
+
+
+### :toolbox: Maintenance :toolbox:
+
+* add mantine form deps ([ea6f309](https://github.com/johnshift/veils/commit/ea6f309d0484a71a58fa9f0ec87c1c59add30a03))
+* add storybook addon interactions ([3711737](https://github.com/johnshift/veils/commit/371173736f3c79d623177c168f3a561718b49c6a))
+* add storybook testing-library deps ([921c93f](https://github.com/johnshift/veils/commit/921c93fe236159dbe9ac265fbc23e8c74b78a667))
+* add uuid deps ([72964bc](https://github.com/johnshift/veils/commit/72964bc313205285e797badd8589805070e4dd94))
+* moved notifications provider inside mantine wrapper ([c82ba7e](https://github.com/johnshift/veils/commit/c82ba7e3e72518cd91eb5a7e4888d9fd70559a70))
+* set prettier print width to 90 ([c05628a](https://github.com/johnshift/veils/commit/c05628af12e64527c877179287a4ebe7ea952471))
+* setup auth-feature-login-modal lib ([72ee005](https://github.com/johnshift/veils/commit/72ee00568ffaa447b96c4d5c7bd56c6bfcf23105))
+* setup auth-ui-login-form ([ab10841](https://github.com/johnshift/veils/commit/ab10841f8a453acd264fcee7800a314921b6419b))
+
+
+### :computer: Code Changes :computer:
+
+* **core-common:** add regex constants ([f1fa1fd](https://github.com/johnshift/veils/commit/f1fa1fdd4d9168d585583bfad540cf815aa317c2))
+* **core-common:** add wait message constant ([5b2439e](https://github.com/johnshift/veils/commit/5b2439e1a5b0b76d70c8a5d08d5360ac56ad4aa0))
+* **core-login:** add password constants ([5d6a773](https://github.com/johnshift/veils/commit/5d6a7737b829aa68c2416d8778f01c4d7797fdd2))
+* **core-login:** add principal constants ([e44b548](https://github.com/johnshift/veils/commit/e44b54848c935a5eb75284a1ff079acab3821859))
+* **data-logout:** used notify loading util fn ([36d35dc](https://github.com/johnshift/veils/commit/36d35dc320c20692e74e4c4824bb60587bdd6ad1))
+* **ui-login-form:** add password input component ([dd6cc00](https://github.com/johnshift/veils/commit/dd6cc001c995663abd218482acf4168a2f73839c))
+* **ui-login-form:** add password validation fn ([8a55311](https://github.com/johnshift/veils/commit/8a553111f974999c42955f9d251444d57667b999))
+* **ui-login-form:** add principal input component ([0658c1b](https://github.com/johnshift/veils/commit/0658c1b40b246ed01c49f64c24d1cec72c3e24fd))
+* **ui-login-form:** add principal validation fn ([1755209](https://github.com/johnshift/veils/commit/17552091be77ae3ce3721d08035371ba63430703))
+* **ui-login-form:** setup storybook ([7409abb](https://github.com/johnshift/veils/commit/7409abba1abfe05f03df201fe727249c49ee4493))
+* **ui-login-form:** use notify loading util ([4884723](https://github.com/johnshift/veils/commit/48847231bfc5f36fe914b3bf01039b526e2518de))
+* **util-common:** add notify loading fn ([a1b5b43](https://github.com/johnshift/veils/commit/a1b5b43fb03322adff896d4c8a7605bcd460bf88))
+
+
+### :drop_of_blood: :crossed_swords: Tests :crossed_swords: :drop_of_blood:
+
+* **ui-login-form:** add password input stories ([c3a5fcf](https://github.com/johnshift/veils/commit/c3a5fcfd7ec5d04e7acf80f86bb27e3ae622829f))
+* **ui-login-form:** add password input unit test ([d64900c](https://github.com/johnshift/veils/commit/d64900ccfd3152dc00cefe16a04e914a2c77d25b))
+* **ui-login-form:** add password validation fn unit test ([879c4de](https://github.com/johnshift/veils/commit/879c4dedca21e915fa565ec18d022fdaa3acf86d))
+* **ui-login-form:** add principal input unit test ([a0abe06](https://github.com/johnshift/veils/commit/a0abe06fe88a973de7c0ce651baf9bda18b38113))
+* **ui-login-form:** add principal input unit test ([b98b55e](https://github.com/johnshift/veils/commit/b98b55e0ef5255692ee0df166acac27d3f9919e2))
+* **ui-login-form:** add principal validation fn unit test ([2a1f110](https://github.com/johnshift/veils/commit/2a1f1101cde714938b04ff5d83e7e135aa0eb909))
+* **util-common:** add notify loading unit test ([76c9a08](https://github.com/johnshift/veils/commit/76c9a08e2fd493189f46f01e4906c25aef31c5dc))
+
 ## [0.0.5](https://github.com/johnshift/veils/compare/v0.0.4...v0.0.5) (2022-07-31)
 
 
