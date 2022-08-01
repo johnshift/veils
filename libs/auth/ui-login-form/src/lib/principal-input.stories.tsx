@@ -4,13 +4,16 @@ import { useState } from 'react';
 import { ChangeEventHandler } from 'react';
 import { useEffect } from 'react';
 
-import { v4 } from 'uuid';
-
 import { useForm } from '@mantine/form';
-import { showNotification, updateNotification } from '@mantine/notifications';
 
-import { ERR_INCORRECT_LOGIN, PLACEHOLDER_PRINCIPAL } from '@auth/core-login/constants';
+import {
+  ERR_INCORRECT_LOGIN,
+  ERR_LOGIN_FAILED,
+  PLACEHOLDER_PRINCIPAL,
+} from '@auth/core-login/constants';
 import { LoginPayload } from '@auth/core-login/dto';
+import { MSG_PLEASE_WAIT } from '@shared/core-common/constants';
+import { useNotifyLoading } from '@shared/util-common/notify/use-notify-loading';
 
 import { PrincipalInput } from './principal-input';
 import { validatePrincipal } from './validation/validate-principal';
@@ -25,6 +28,7 @@ type Props = {
   fakeLoadingMs: number;
 };
 
+// Wrapper best approximates hook used in login-form container
 const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
   // For login, we only give ambiguous error message
   // isRed is the indicator for an error in validation or mutation
@@ -57,19 +61,15 @@ const Wrapper = ({ isLoading = false, fakeLoadingMs = 1000 }: Props) => {
     }
   }, [formValues, formErrors, isRed]);
 
+  const { notifyLoading, notifyError } = useNotifyLoading();
+
   const handleError = (errors: typeof formErrors) => {
     if (errors['principal'] || errors['password']) {
-      const id = v4();
       setFakeLoading(true);
-      showNotification({
-        id,
-        message: 'Loading',
-        color: 'cyan',
-        loading: true,
-      });
+      notifyLoading(MSG_PLEASE_WAIT);
       setTimeout(() => {
         setIsRed(true);
-        updateNotification({ id, message: ERR_INCORRECT_LOGIN, color: 'red' });
+        notifyError(ERR_LOGIN_FAILED, ERR_INCORRECT_LOGIN);
         setFakeLoading(false);
       }, fakeLoadingMs);
     }
