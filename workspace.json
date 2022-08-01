@@ -19,6 +19,7 @@
     "auth-util-test-session": "libs/auth/util-test-session",
     "shared-core-common": "libs/shared/core-common",
     "shared-data-testutils": "libs/shared/data-testutils",
+    "shared-feature-appbar": "libs/shared/feature-appbar",
     "shared-feature-testutils": "libs/shared/feature-testutils",
     "shared-ui-appbar": "libs/shared/ui-appbar",
     "shared-ui-testutils": "libs/shared/ui-testutils",

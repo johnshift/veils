@@ -34,6 +34,7 @@
       "@auth/util-test-session": ["libs/auth/util-test-session/src/index.ts"],
       "@shared/core-common": ["libs/shared/core-common/src/index.ts"],
       "@shared/data-testutils": ["libs/shared/data-testutils/src/index.ts"],
+      "@shared/feature-appbar": ["libs/shared/feature-appbar/src/index.ts"],
       "@shared/feature-testutils": [
         "libs/shared/feature-testutils/src/index.ts"
       ],
