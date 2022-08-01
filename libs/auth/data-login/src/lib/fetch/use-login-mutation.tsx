@@ -1,16 +1,21 @@
-import { DispatchWithoutAction } from 'react';
-
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { DispatchWithoutAction } from 'react';
 
 import { showNotification } from '@mantine/notifications';
 import { IconCircleCheck } from '@tabler/icons';
 import { IconAlertCircle } from '@tabler/icons';
 
-import { ERR_LOGIN_FAILED, MSG_LOGIN_OK } from '@auth/core-login/constants';
-import { LoginPayload, LoginResponse } from '@auth/core-login/dto';
-import { GenericResponse } from '@shared/core-common/dto/generic-response';
+import {
+  ERR_LOGIN_FAILED,
+  MSG_LOGIN_OK,
+  URL_API_AUTH_LOGIN,
+} from '@auth/core-login';
+import type { LoginPayload, LoginResponse } from '@auth/core-login';
+import type { GenericResponse } from '@shared/core-common';
+import { apiFetch } from '@shared/util-common';
 
-import { loginMutFn } from './login-mut-fn';
+const loginMutFn = async (payload: LoginPayload) =>
+  apiFetch<LoginResponse, LoginPayload>('POST', URL_API_AUTH_LOGIN, payload);
 
 export const useLoginMutation = (closeModal: DispatchWithoutAction) => {
   const queryClient = useQueryClient();

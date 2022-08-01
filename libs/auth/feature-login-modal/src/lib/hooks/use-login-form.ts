@@ -1,13 +1,17 @@
-import { ChangeEventHandler, DispatchWithoutAction, useEffect, useState } from 'react';
+import {
+  ChangeEventHandler,
+  DispatchWithoutAction,
+  useEffect,
+  useState,
+} from 'react';
 
 import { useForm } from '@mantine/form';
 
-import { ERR_INCORRECT_LOGIN, ERR_LOGIN_FAILED } from '@auth/core-login/constants';
-import { LoginPayload } from '@auth/core-login/dto';
-import { useLoginMutation } from '@auth/data-login/fetch/use-login-mutation';
-import { validatePassword } from '@auth/ui-login-form/validation/validate-password';
-import { validatePrincipal } from '@auth/ui-login-form/validation/validate-principal';
-import { useNotify } from '@shared/util-common/notify/use-notify';
+import { ERR_INCORRECT_LOGIN, ERR_LOGIN_FAILED } from '@auth/core-login';
+import type { LoginPayload } from '@auth/core-login';
+import { useLoginMutation } from '@auth/data-login';
+import { validatePassword, validatePrincipal } from '@auth/ui-login-form';
+import { useNotify } from '@shared/util-common';
 
 // We need type `InputProps` since we only need value and onChange fields
 // returned by `@mantine/form` `getInputProps`.
@@ -18,7 +22,10 @@ type InputProps = {
 };
 
 // UseLoginForm hook separates logic from ui
-export const useLoginForm = (onClose: DispatchWithoutAction, fakeLoadingMs: number) => {
+export const useLoginForm = (
+  onClose: DispatchWithoutAction,
+  fakeLoadingMs: number,
+) => {
   // For login, we only give ambiguous error message
   // isRed is the indicator for an error in validation or mutation
   const [isRed, setIsRed] = useState(false);
@@ -51,13 +58,19 @@ export const useLoginForm = (onClose: DispatchWithoutAction, fakeLoadingMs: numb
     onClose();
   };
 
-  const { mutate, error: mutationError, isLoading } = useLoginMutation(closeModal);
+  const {
+    mutate,
+    error: mutationError,
+    isLoading,
+  } = useLoginMutation(closeModal);
 
   // We want to turn off red borders if no validation error is present
   useEffect(() => {
     // Should only turn off if isRed is active and no validation/mutation errors
     const hasErrors =
-      formErrors['principal'] || formErrors['password'] || Boolean(mutationError);
+      formErrors['principal'] ||
+      formErrors['password'] ||
+      Boolean(mutationError);
     if (isRed && !hasErrors) {
       setIsRed(false);
     }

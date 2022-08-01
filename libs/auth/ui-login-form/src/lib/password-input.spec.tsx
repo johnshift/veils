@@ -1,7 +1,7 @@
 import {
   PLACEHOLDER_PASSWORD,
   TESTID_PASSWORD_VISIBILITY,
-} from '@auth/core-login/constants';
+} from '@auth/core-login';
 import { render, screen, user } from '@shared/ui-testutils';
 
 import { PasswordInput } from './password-input';
@@ -14,7 +14,9 @@ describe('PasswordInput', () => {
     const value = '';
     const onChange = jest.fn();
 
-    render(<PasswordInput isInvalid={isInvalid} value={value} onChange={onChange} />);
+    render(
+      <PasswordInput isInvalid={isInvalid} value={value} onChange={onChange} />,
+    );
 
     // Assert default
     const input = screen.getByPlaceholderText(PLACEHOLDER_PASSWORD);
@@ -43,9 +45,13 @@ describe('PasswordInput', () => {
     const value = '';
     const onChange = jest.fn();
 
-    render(<PasswordInput isInvalid={isInvalid} value={value} onChange={onChange} />);
+    render(
+      <PasswordInput isInvalid={isInvalid} value={value} onChange={onChange} />,
+    );
 
     // Assert disabled
-    expect(screen.getByPlaceholderText(PLACEHOLDER_PASSWORD).parentNode).toBeInvalid();
+    expect(
+      screen.getByPlaceholderText(PLACEHOLDER_PASSWORD).parentNode,
+    ).toBeInvalid();
   });
 });

@@ -1,7 +1,7 @@
 import { DispatchWithoutAction, createContext, useContext } from 'react';
 
-import { emptySession } from '@auth/core-session/empty-session';
-import type { Session } from '@auth/core-session/types';
+import { emptySession } from '@auth/core-session';
+import type { Session } from '@auth/core-session';
 
 interface SessionCtx extends Session {
   // global loading state

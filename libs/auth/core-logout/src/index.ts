@@ -1,0 +1,9 @@
+// Constants
+export {
+  ERR_LOGOUT_FAILED,
+  MSG_LOGOUT_OK,
+  MSG_LOGOUT_LOADING,
+  MSG_LOGOUT_DONE,
+  URL_API_AUTH_LOGOUT,
+  ID_LOGOUT_NOTIF,
+} from './lib/constants';

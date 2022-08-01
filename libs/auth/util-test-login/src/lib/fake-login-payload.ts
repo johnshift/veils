@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-import { LoginPayload } from '@auth/core-login/dto';
+import type { LoginPayload } from '@auth/core-login';
 
 export const fakeLoginPayload = (useEmail = true): LoginPayload => ({
   principal: useEmail ? faker.internet.email() : faker.lorem.slug(2),

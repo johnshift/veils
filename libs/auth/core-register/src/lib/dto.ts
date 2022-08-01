@@ -1,5 +1,5 @@
-import { Session } from '@auth/core-session/types';
-import { GenericResponse } from '@shared/core-common/dto/generic-response';
+import type { Session } from '@auth/core-session';
+import type { GenericResponse } from '@shared/core-common';
 
 import { RegisterFieldError } from './misc';
 

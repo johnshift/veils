@@ -4,17 +4,14 @@ import * as mantineNotifications from '@mantine/notifications';
 import { IconCircleCheck } from '@tabler/icons';
 import { IconAlertCircle } from '@tabler/icons';
 
-import {
-  ERR_REGISTER_FAILED,
-  MSG_REGISTER_OK,
-} from '@auth/core-register/constants';
-import { emptySession } from '@auth/core-session/empty-session';
+import { ERR_REGISTER_FAILED, MSG_REGISTER_OK } from '@auth/core-register';
+import { emptySession } from '@auth/core-session';
 import {
   fakeRegisterPayload,
   mockRegisterResponse,
 } from '@auth/util-test-register';
 import { fakeSession } from '@auth/util-test-session';
-import { ERR_NETWORK } from '@shared/core-common/constants';
+import { ERR_NETWORK } from '@shared/core-common';
 import { TestWrapper, act, renderHook, waitFor } from '@shared/data-testutils';
 
 import { useRegisterMutation } from './use-register-mutation';

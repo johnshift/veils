@@ -6,7 +6,7 @@ import { IconEyeCheck, IconEyeOff } from '@tabler/icons';
 import {
   PLACEHOLDER_PASSWORD,
   TESTID_PASSWORD_VISIBILITY,
-} from '@auth/core-login/constants';
+} from '@auth/core-login';
 
 type Props = {
   isInvalid: boolean;

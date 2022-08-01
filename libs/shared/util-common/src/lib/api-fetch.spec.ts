@@ -1,7 +1,7 @@
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 
-import { ERR_INTERNAL, ERR_NETWORK } from '@shared/core-common/constants';
+import { ERR_INTERNAL, ERR_NETWORK } from '@shared/core-common';
 
 import { apiFetch } from './api-fetch';
 

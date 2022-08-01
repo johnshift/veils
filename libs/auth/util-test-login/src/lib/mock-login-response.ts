@@ -1,8 +1,8 @@
 import { rest } from 'msw';
 
-import { URL_API_AUTH_LOGIN } from '@auth/core-login/constants';
-import { LoginResponse } from '@auth/core-login/dto';
-import { GenericResponse } from '@shared/core-common/dto/generic-response';
+import { URL_API_AUTH_LOGIN } from '@auth/core-login';
+import type { LoginResponse } from '@auth/core-login';
+import type { GenericResponse } from '@shared/core-common';
 
 export const mockLoginResponse = (
   status: number,

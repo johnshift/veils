@@ -7,9 +7,9 @@ import {
   ERR_LOGOUT_FAILED,
   MSG_LOGOUT_LOADING,
   MSG_LOGOUT_OK,
-} from '@auth/core-logout/constants';
+} from '@auth/core-logout';
 import { mockLogoutResponse } from '@auth/util-test-logout';
-import { ERR_INTERNAL, ERR_NETWORK } from '@shared/core-common/constants';
+import { ERR_INTERNAL, ERR_NETWORK } from '@shared/core-common';
 import { TestWrapper, act, renderHook, waitFor } from '@shared/data-testutils';
 
 import { useLogoutMutation } from './use-logout-mutation';
@@ -30,7 +30,10 @@ describe('useLogoutMutation', () => {
   test('error', async () => {
     // Spy on mantine notifications
     const showNotifSpy = jest.spyOn(mantineNotifications, 'showNotification');
-    const updateNotifSpy = jest.spyOn(mantineNotifications, 'updateNotification');
+    const updateNotifSpy = jest.spyOn(
+      mantineNotifications,
+      'updateNotification',
+    );
 
     // Mock error response
     const mockStatus = 500;
@@ -81,7 +84,10 @@ describe('useLogoutMutation', () => {
   test('network error', async () => {
     // Spy on mantine notifications
     const showNotifSpy = jest.spyOn(mantineNotifications, 'showNotification');
-    const updateNotifSpy = jest.spyOn(mantineNotifications, 'updateNotification');
+    const updateNotifSpy = jest.spyOn(
+      mantineNotifications,
+      'updateNotification',
+    );
 
     // Mock network error response
     mswServer.use(mockLogoutResponse(-1, undefined, true));
@@ -125,7 +131,10 @@ describe('useLogoutMutation', () => {
   test('success', async () => {
     // Spy on mantine notifications
     const showNotifSpy = jest.spyOn(mantineNotifications, 'showNotification');
-    const updateNotifSpy = jest.spyOn(mantineNotifications, 'updateNotification');
+    const updateNotifSpy = jest.spyOn(
+      mantineNotifications,
+      'updateNotification',
+    );
 
     // Mock success response
     const body = {

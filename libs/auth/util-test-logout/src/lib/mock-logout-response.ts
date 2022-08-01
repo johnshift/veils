@@ -1,7 +1,7 @@
 import { rest } from 'msw';
 
-import { URL_API_AUTH_LOGOUT } from '@auth/core-logout/constants';
-import { GenericResponse } from '@shared/core-common/dto/generic-response';
+import { URL_API_AUTH_LOGOUT } from '@auth/core-logout';
+import type { GenericResponse } from '@shared/core-common';
 
 export const mockLogoutResponse = (
   status: number,

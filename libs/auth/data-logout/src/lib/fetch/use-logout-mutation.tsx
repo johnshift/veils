@@ -4,14 +4,15 @@ import {
   ERR_LOGOUT_FAILED,
   MSG_LOGOUT_DONE,
   MSG_LOGOUT_LOADING,
-} from '@auth/core-logout/constants';
-import { MSG_LOGOUT_OK, URL_API_AUTH_LOGOUT } from '@auth/core-logout/constants';
-import { emptySession } from '@auth/core-session/empty-session';
-import { GenericResponse } from '@shared/core-common/dto/generic-response';
-import { apiFetch } from '@shared/util-common/api-fetch';
-import { useNotifyLoading } from '@shared/util-common/notify/use-notify-loading';
+  MSG_LOGOUT_OK,
+  URL_API_AUTH_LOGOUT,
+} from '@auth/core-logout';
+import { emptySession } from '@auth/core-session';
+import type { GenericResponse } from '@shared/core-common';
+import { apiFetch, useNotifyLoading } from '@shared/util-common';
 
-const logout = async () => apiFetch<GenericResponse>('POST', URL_API_AUTH_LOGOUT);
+const logout = async () =>
+  apiFetch<GenericResponse>('POST', URL_API_AUTH_LOGOUT);
 
 export const useLogoutMutation = () => {
   const queryClient = useQueryClient();

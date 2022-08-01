@@ -1,10 +1,10 @@
 import { rest } from 'msw';
 
-import { URL_API_AUTH_REGISTER } from '@auth/core-register/constants';
-import {
+import { URL_API_AUTH_REGISTER } from '@auth/core-register';
+import type {
   RegisterErrorResponse,
   RegisterResponse,
-} from '@auth/core-register/dto';
+} from '@auth/core-register';
 
 export const mockRegisterResponse = (
   status: number,

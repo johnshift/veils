@@ -1,4 +1,4 @@
-import { PLACEHOLDER_PRINCIPAL } from '@auth/core-login/constants';
+import { PLACEHOLDER_PRINCIPAL } from '@auth/core-login';
 import { render, screen, user } from '@shared/ui-testutils';
 
 import { PrincipalInput } from './principal-input';
@@ -11,7 +11,13 @@ describe('PrincipalInput', () => {
     const value = '';
     const onChange = jest.fn();
 
-    render(<PrincipalInput isInvalid={isInvalid} value={value} onChange={onChange} />);
+    render(
+      <PrincipalInput
+        isInvalid={isInvalid}
+        value={value}
+        onChange={onChange}
+      />,
+    );
 
     // Assert default
     const input = screen.getByPlaceholderText(PLACEHOLDER_PRINCIPAL);
@@ -33,7 +39,13 @@ describe('PrincipalInput', () => {
     const value = '';
     const onChange = jest.fn();
 
-    render(<PrincipalInput isInvalid={isInvalid} value={value} onChange={onChange} />);
+    render(
+      <PrincipalInput
+        isInvalid={isInvalid}
+        value={value}
+        onChange={onChange}
+      />,
+    );
 
     // Assert disabled
     expect(screen.getByPlaceholderText(PLACEHOLDER_PRINCIPAL)).toHaveAttribute(

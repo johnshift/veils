@@ -6,8 +6,8 @@ import { useEffect } from 'react';
 
 import { useForm } from '@mantine/form';
 
-import { PLACEHOLDER_PRINCIPAL } from '@auth/core-login/constants';
-import { LoginPayload } from '@auth/core-login/dto';
+import { PLACEHOLDER_PRINCIPAL } from '@auth/core-login';
+import type { LoginPayload } from '@auth/core-login';
 
 import { PrincipalInput } from './principal-input';
 import { validatePrincipal } from './validation/validate-principal';
@@ -78,7 +78,10 @@ export const ErrorShort = Template.bind({});
 ErrorShort.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  await userEvent.type(canvas.getByPlaceholderText(PLACEHOLDER_PRINCIPAL), 'xxx');
+  await userEvent.type(
+    canvas.getByPlaceholderText(PLACEHOLDER_PRINCIPAL),
+    'xxx',
+  );
   await userEvent.keyboard('{Enter}');
 };
 
@@ -97,7 +100,10 @@ export const ErrorProfileId = Template.bind({});
 ErrorProfileId.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  await userEvent.type(canvas.getByPlaceholderText(PLACEHOLDER_PRINCIPAL), 'asdf!');
+  await userEvent.type(
+    canvas.getByPlaceholderText(PLACEHOLDER_PRINCIPAL),
+    'asdf!',
+  );
   await userEvent.keyboard('{Enter}');
 };
 
@@ -105,6 +111,9 @@ export const ErrorEmail = Template.bind({});
 ErrorEmail.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  await userEvent.type(canvas.getByPlaceholderText(PLACEHOLDER_PRINCIPAL), 'x@i.o');
+  await userEvent.type(
+    canvas.getByPlaceholderText(PLACEHOLDER_PRINCIPAL),
+    'x@i.o',
+  );
   await userEvent.keyboard('{Enter}');
 };

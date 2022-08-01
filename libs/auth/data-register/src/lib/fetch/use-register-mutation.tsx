@@ -1,6 +1,5 @@
-import { DispatchWithoutAction } from 'react';
-
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { DispatchWithoutAction } from 'react';
 
 import { showNotification } from '@mantine/notifications';
 import { IconCircleCheck } from '@tabler/icons';
@@ -9,14 +8,21 @@ import { IconAlertCircle } from '@tabler/icons';
 import {
   ERR_REGISTER_FAILED,
   MSG_REGISTER_OK,
-} from '@auth/core-register/constants';
-import {
+  URL_API_AUTH_REGISTER,
+} from '@auth/core-register';
+import type {
   RegisterErrorResponse,
   RegisterPayload,
   RegisterResponse,
-} from '@auth/core-register/dto';
+} from '@auth/core-register';
+import { apiFetch } from '@shared/util-common';
 
-import { registerMutFn } from './register-mut-fn';
+const registerMutFn = async (payload: RegisterPayload) =>
+  apiFetch<RegisterResponse, RegisterPayload>(
+    'POST',
+    URL_API_AUTH_REGISTER,
+    payload,
+  );
 
 export const useRegisterMutation = (closeModal: DispatchWithoutAction) => {
   const queryClient = useQueryClient();

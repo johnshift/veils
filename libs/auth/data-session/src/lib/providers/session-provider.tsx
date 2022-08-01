@@ -2,7 +2,7 @@ import { ReactNode, useMemo } from 'react';
 
 import { useDisclosure } from '@mantine/hooks';
 
-import { emptySession } from '@auth/core-session/empty-session';
+import { emptySession } from '@auth/core-session';
 
 import { SessionContext } from '../context/session-context';
 import { useSessionQuery } from '../fetch/use-session-query';
@@ -37,6 +37,8 @@ export const SessionProvider = ({ children }: Props) => {
   );
 
   return (
-    <SessionContext.Provider value={memoizedValue}>{children}</SessionContext.Provider>
+    <SessionContext.Provider value={memoizedValue}>
+      {children}
+    </SessionContext.Provider>
   );
 };

@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-import { RegisterPayload } from '@auth/core-register/dto';
+import type { RegisterPayload } from '@auth/core-register';
 
 export const fakeRegisterPayload = (): RegisterPayload => ({
   firstName: faker.name.firstName(),

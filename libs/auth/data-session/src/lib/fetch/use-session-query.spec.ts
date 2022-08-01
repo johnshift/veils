@@ -1,7 +1,7 @@
 import { setupServer } from 'msw/node';
 
 import { fakeSession, mockSessionResponse } from '@auth/util-test-session';
-import { ERR_INTERNAL, ERR_NETWORK } from '@shared/core-common/constants';
+import { ERR_INTERNAL, ERR_NETWORK } from '@shared/core-common';
 import { TestWrapper, renderHook, waitFor } from '@shared/data-testutils';
 
 import { useSessionQuery } from './use-session-query';

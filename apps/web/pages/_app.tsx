@@ -1,8 +1,8 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { MantineWrapper } from '@shared/util-wrappers/mantine';
-import { ReactQueryWrapper } from '@shared/util-wrappers/react-query';
+import { MantineWrapper } from '@shared/util-wrappers';
+import { ReactQueryWrapper } from '@shared/util-wrappers';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>

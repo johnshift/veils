@@ -1,5 +1,5 @@
-import { ERR_INTERNAL } from '@shared/core-common/constants';
-import { GenericResponse } from '@shared/core-common/dto/generic-response';
+import { ERR_INTERNAL } from '@shared/core-common';
+import type { GenericResponse } from '@shared/core-common';
 
 // R = response type, P = payload type
 export const apiFetch = async <R = GenericResponse, P = undefined>(

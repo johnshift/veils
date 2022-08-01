@@ -1,5 +1,5 @@
-import { Session } from '@auth/core-session/types';
-import type { GenericResponse } from '@shared/core-common/dto/generic-response';
+import type { Session } from '@auth/core-session';
+import type { GenericResponse } from '@shared/core-common';
 
 export type LoginResponse = {
   session: Session;

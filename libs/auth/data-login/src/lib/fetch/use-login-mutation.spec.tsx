@@ -8,10 +8,10 @@ import {
   ERR_INCORRECT_LOGIN,
   ERR_LOGIN_FAILED,
   MSG_LOGIN_OK,
-} from '@auth/core-login/constants';
+} from '@auth/core-login';
 import { fakeLoginPayload, mockLoginResponse } from '@auth/util-test-login';
 import { fakeSession } from '@auth/util-test-session';
-import { ERR_NETWORK } from '@shared/core-common/constants';
+import { ERR_NETWORK } from '@shared/core-common';
 import { TestWrapper, act, renderHook, waitFor } from '@shared/data-testutils';
 
 import { useLoginMutation } from './use-login-mutation';

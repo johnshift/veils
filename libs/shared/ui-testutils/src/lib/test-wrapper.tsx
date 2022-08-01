@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { MantineWrapper } from '@shared/util-wrappers/mantine';
+import { MantineWrapper } from '@shared/util-wrappers';
 
 interface Props {
   children: ReactNode;

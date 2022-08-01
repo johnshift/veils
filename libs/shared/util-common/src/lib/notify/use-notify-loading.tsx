@@ -8,7 +8,7 @@ import {
 import { IconCircleCheck } from '@tabler/icons';
 import { IconAlertCircle } from '@tabler/icons';
 
-import { MSG_LOADING } from '@shared/core-common/constants';
+import { MSG_LOADING } from '@shared/core-common';
 
 export const useNotifyLoading = () => {
   const id = v4();

@@ -7,12 +7,12 @@ import {
   ERR_INCORRECT_LOGIN,
   PLACEHOLDER_PASSWORD,
   PLACEHOLDER_PRINCIPAL,
-} from '@auth/core-login/constants';
-import { emptySession } from '@auth/core-session/empty-session';
-import { useSessionContext } from '@auth/data-session/context/session-context';
+} from '@auth/core-login';
+import { emptySession } from '@auth/core-session';
+import { useSessionContext } from '@auth/data-session';
 import { mockLoginResponse } from '@auth/util-test-login';
 import { fakeSession, mockSessionResponse } from '@auth/util-test-session';
-import { ERR_NETWORK } from '@shared/core-common/constants';
+import { ERR_NETWORK } from '@shared/core-common';
 
 import { LoginModal } from './login-modal';
 
@@ -41,11 +41,17 @@ const fillDetails = async (
   const canvas = within(canvasElement);
 
   // Open Menu
-  await userEvent.click(canvas.getByRole('button', { name: 'open login modal' }));
+  await userEvent.click(
+    canvas.getByRole('button', { name: 'open login modal' }),
+  );
 
   // Components
-  const principalInput = await screen.findByPlaceholderText(PLACEHOLDER_PRINCIPAL);
-  const passwordInput = await screen.findByPlaceholderText(PLACEHOLDER_PASSWORD);
+  const principalInput = await screen.findByPlaceholderText(
+    PLACEHOLDER_PRINCIPAL,
+  );
+  const passwordInput = await screen.findByPlaceholderText(
+    PLACEHOLDER_PASSWORD,
+  );
 
   // Type invalid payload
   await userEvent.type(principalInput, principal || 'demo');
@@ -57,7 +63,9 @@ export const Default = Template.bind({});
 Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  await userEvent.click(canvas.getByRole('button', { name: 'open login modal' }));
+  await userEvent.click(
+    canvas.getByRole('button', { name: 'open login modal' }),
+  );
 };
 
 Default.parameters = {
@@ -102,11 +110,17 @@ ValidationError.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
   // Open Menu
-  await userEvent.click(canvas.getByRole('button', { name: 'open login modal' }));
+  await userEvent.click(
+    canvas.getByRole('button', { name: 'open login modal' }),
+  );
 
   // Components
-  const principalInput = await screen.findByPlaceholderText(PLACEHOLDER_PRINCIPAL);
-  const passwordInput = await screen.findByPlaceholderText(PLACEHOLDER_PASSWORD);
+  const principalInput = await screen.findByPlaceholderText(
+    PLACEHOLDER_PRINCIPAL,
+  );
+  const passwordInput = await screen.findByPlaceholderText(
+    PLACEHOLDER_PASSWORD,
+  );
 
   // Type invalid payload
   await userEvent.type(principalInput, 'demo!');
@@ -159,7 +173,10 @@ Success.parameters = {
       // Mock long running request
       mockLoginResponse(
         200,
-        { session: successSession, message: `Welcome ${successSession.firstName}` },
+        {
+          session: successSession,
+          message: `Welcome ${successSession.firstName}`,
+        },
         false,
         1000,
       ),

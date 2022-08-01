@@ -7,8 +7,8 @@ import { useEffect } from 'react';
 import { Box } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
-import { PLACEHOLDER_PASSWORD } from '@auth/core-login/constants';
-import { LoginPayload } from '@auth/core-login/dto';
+import { PLACEHOLDER_PASSWORD } from '@auth/core-login';
+import type { LoginPayload } from '@auth/core-login';
 
 import { PasswordInput } from './password-input';
 import { validatePassword } from './validation/validate-password';
@@ -79,7 +79,10 @@ export const Default = Template.bind({});
 Default.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  await userEvent.type(canvas.getByPlaceholderText(PLACEHOLDER_PASSWORD), '123456');
+  await userEvent.type(
+    canvas.getByPlaceholderText(PLACEHOLDER_PASSWORD),
+    '123456',
+  );
   await userEvent.keyboard('{Enter}');
 };
 
@@ -87,7 +90,10 @@ export const ErrorShort = Template.bind({});
 ErrorShort.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  await userEvent.type(canvas.getByPlaceholderText(PLACEHOLDER_PASSWORD), '12345');
+  await userEvent.type(
+    canvas.getByPlaceholderText(PLACEHOLDER_PASSWORD),
+    '12345',
+  );
   await userEvent.keyboard('{Enter}');
 };
 

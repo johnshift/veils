@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-import { Session } from '@auth/core-session/types';
+import type { Session } from '@auth/core-session';
 
 export const fakeSession = (): Session => ({
   id: faker.datatype.uuid(),

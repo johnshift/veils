@@ -6,12 +6,12 @@ import {
   MSG_LOGIN_OK,
   PLACEHOLDER_PASSWORD,
   PLACEHOLDER_PRINCIPAL,
-} from '@auth/core-login/constants';
-import { emptySession } from '@auth/core-session/empty-session';
-import { useSessionContext } from '@auth/data-session/context/session-context';
+} from '@auth/core-login';
+import { emptySession } from '@auth/core-session';
+import { useSessionContext } from '@auth/data-session';
 import { fakeLoginPayload, mockLoginResponse } from '@auth/util-test-login';
 import { fakeSession, mockSessionResponse } from '@auth/util-test-session';
-import { ERR_NETWORK } from '@shared/core-common/constants';
+import { ERR_NETWORK } from '@shared/core-common';
 import { render, screen, user, waitFor } from '@shared/feature-testutils';
 
 import { LoginModal } from './login-modal';
@@ -50,7 +50,10 @@ describe('Login Modal', () => {
       // Mock not logged in
       mockSessionResponse(200, emptySession),
       // Mock loading
-      mockLoginResponse(400, { session: emptySession, message: ERR_INCORRECT_LOGIN }),
+      mockLoginResponse(400, {
+        session: emptySession,
+        message: ERR_INCORRECT_LOGIN,
+      }),
     );
 
     // Render component

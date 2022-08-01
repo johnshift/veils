@@ -6,9 +6,9 @@ module.exports = {
   arrowParens: 'always',
   tabWidth: 2,
   useTabs: false,
-  printWidth: 90,
+  printWidth: 80,
   importOrder: [
-    '^(next|react|react-query|@storybook/(.*))$',
+    '^((@tanstack|@storybook)/(.*)|next|react)$',
     '<THIRD_PARTY_MODULES>',
     '^@(mantine|tabler)/(.*)$',
     '(@testing-library/(.*)|whatwg-fetch)$',

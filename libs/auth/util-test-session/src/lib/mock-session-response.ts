@@ -1,8 +1,8 @@
 import { rest } from 'msw';
 
-import { URL_API_AUTH_SESSION } from '@auth/core-session/constants';
-import { Session } from '@auth/core-session/types';
-import { GenericResponse } from '@shared/core-common/dto/generic-response';
+import { URL_API_AUTH_SESSION } from '@auth/core-session';
+import type { Session } from '@auth/core-session';
+import type { GenericResponse } from '@shared/core-common';
 
 export const mockSessionResponse = (
   status: number,

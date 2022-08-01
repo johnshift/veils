@@ -1,10 +1,8 @@
+import { QueryClient } from '@tanstack/react-query';
 import { ReactNode } from 'react';
 
-import { QueryClient } from '@tanstack/react-query';
-
-import { SessionProvider } from '@auth/data-session/providers/session-provider';
-import { MantineWrapper } from '@shared/util-wrappers/mantine';
-import { ReactQueryWrapper } from '@shared/util-wrappers/react-query';
+import { SessionProvider } from '@auth/data-session';
+import { MantineWrapper, ReactQueryWrapper } from '@shared/util-wrappers';
 
 interface Props {
   children: ReactNode;

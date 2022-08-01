@@ -13,9 +13,8 @@ import {
   Title,
 } from '@mantine/core';
 
-import { useSessionContext } from '@auth/data-session/context/session-context';
-import { PasswordInput } from '@auth/ui-login-form/password-input';
-import { PrincipalInput } from '@auth/ui-login-form/principal-input';
+import { useSessionContext } from '@auth/data-session';
+import { PasswordInput, PrincipalInput } from '@auth/ui-login-form';
 
 import { useLoginForm } from './hooks/use-login-form';
 

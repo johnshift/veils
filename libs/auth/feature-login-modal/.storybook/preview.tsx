@@ -1,14 +1,13 @@
+import { QueryClient } from '@tanstack/react-query';
 import React from 'react';
 
-import { QueryClient } from '@tanstack/react-query';
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 import { useDarkMode } from 'storybook-dark-mode';
 
 import { Center } from '@mantine/core';
 
-import { SessionProvider } from '@auth/data-session/providers/session-provider';
-import { MantineWrapper } from '@shared/util-wrappers/mantine';
-import { ReactQueryWrapper } from '@shared/util-wrappers/react-query';
+import { SessionProvider } from '@auth/data-session';
+import { MantineWrapper, ReactQueryWrapper } from '@shared/util-wrappers';
 
 // React query client
 const queryClient = new QueryClient({
@@ -42,7 +41,9 @@ const ThemeWrapper = (props: { children: React.ReactNode }) => (
   <MantineWrapper colorScheme={useDarkMode() ? 'dark' : 'light'}>
     <ReactQueryWrapper client={queryClient}>
       <SessionProvider>
-        <Center style={{ width: '100vw', height: '100vh' }}>{props.children}</Center>
+        <Center style={{ width: '100vw', height: '100vh' }}>
+          {props.children}
+        </Center>
       </SessionProvider>
     </ReactQueryWrapper>
   </MantineWrapper>
