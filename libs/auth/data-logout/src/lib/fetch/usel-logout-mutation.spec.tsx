@@ -5,7 +5,6 @@ import { IconAlertCircle, IconCircleCheck } from '@tabler/icons';
 
 import {
   ERR_LOGOUT_FAILED,
-  ID_LOGOUT_NOTIF,
   MSG_LOGOUT_LOADING,
   MSG_LOGOUT_OK,
 } from '@auth/core-logout/constants';
@@ -31,10 +30,7 @@ describe('useLogoutMutation', () => {
   test('error', async () => {
     // Spy on mantine notifications
     const showNotifSpy = jest.spyOn(mantineNotifications, 'showNotification');
-    const updateNotifSpy = jest.spyOn(
-      mantineNotifications,
-      'updateNotification',
-    );
+    const updateNotifSpy = jest.spyOn(mantineNotifications, 'updateNotification');
 
     // Mock error response
     const mockStatus = 500;
@@ -62,30 +58,30 @@ describe('useLogoutMutation', () => {
     });
 
     // Assert notification
-    expect(showNotifSpy).toHaveBeenCalledWith({
-      id: ID_LOGOUT_NOTIF,
-      title: 'Loading',
-      loading: true,
-      message: MSG_LOGOUT_LOADING,
-      autoClose: false,
-      disallowClose: true,
-    });
-    expect(updateNotifSpy).toHaveBeenCalledWith({
-      id: ID_LOGOUT_NOTIF,
-      title: ERR_LOGOUT_FAILED,
-      message: mockErrorMessage,
-      color: 'red',
-      icon: <IconAlertCircle />,
-    });
+    expect(showNotifSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: 'Loading',
+        loading: true,
+        message: MSG_LOGOUT_LOADING,
+        autoClose: false,
+        disallowClose: true,
+        color: 'blue',
+      }),
+    );
+    expect(updateNotifSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: ERR_LOGOUT_FAILED,
+        message: mockErrorMessage,
+        color: 'red',
+        icon: <IconAlertCircle />,
+      }),
+    );
   });
 
   test('network error', async () => {
     // Spy on mantine notifications
     const showNotifSpy = jest.spyOn(mantineNotifications, 'showNotification');
-    const updateNotifSpy = jest.spyOn(
-      mantineNotifications,
-      'updateNotification',
-    );
+    const updateNotifSpy = jest.spyOn(mantineNotifications, 'updateNotification');
 
     // Mock network error response
     mswServer.use(mockLogoutResponse(-1, undefined, true));
@@ -106,30 +102,30 @@ describe('useLogoutMutation', () => {
     });
 
     // Assert notification
-    expect(showNotifSpy).toHaveBeenCalledWith({
-      id: ID_LOGOUT_NOTIF,
-      title: 'Loading',
-      loading: true,
-      message: MSG_LOGOUT_LOADING,
-      autoClose: false,
-      disallowClose: true,
-    });
-    expect(updateNotifSpy).toHaveBeenCalledWith({
-      id: ID_LOGOUT_NOTIF,
-      title: ERR_LOGOUT_FAILED,
-      message: ERR_NETWORK,
-      color: 'red',
-      icon: <IconAlertCircle />,
-    });
+    expect(showNotifSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: 'Loading',
+        loading: true,
+        message: MSG_LOGOUT_LOADING,
+        autoClose: false,
+        disallowClose: true,
+        color: 'blue',
+      }),
+    );
+    expect(updateNotifSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: ERR_LOGOUT_FAILED,
+        message: ERR_NETWORK,
+        color: 'red',
+        icon: <IconAlertCircle />,
+      }),
+    );
   });
 
   test('success', async () => {
     // Spy on mantine notifications
     const showNotifSpy = jest.spyOn(mantineNotifications, 'showNotification');
-    const updateNotifSpy = jest.spyOn(
-      mantineNotifications,
-      'updateNotification',
-    );
+    const updateNotifSpy = jest.spyOn(mantineNotifications, 'updateNotification');
 
     // Mock success response
     const body = {
@@ -156,21 +152,24 @@ describe('useLogoutMutation', () => {
     // Assert notification
 
     // Assert notification
-    expect(showNotifSpy).toHaveBeenCalledWith({
-      id: ID_LOGOUT_NOTIF,
-      title: 'Loading',
-      loading: true,
-      message: MSG_LOGOUT_LOADING,
-      autoClose: false,
-      disallowClose: true,
-    });
-    expect(updateNotifSpy).toHaveBeenCalledWith({
-      id: ID_LOGOUT_NOTIF,
-      color: 'green',
-      title: MSG_LOGOUT_OK,
-      message: 'You have been logged out',
-      icon: <IconCircleCheck />,
-      autoClose: 2000,
-    });
+    expect(showNotifSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: 'Loading',
+        loading: true,
+        message: MSG_LOGOUT_LOADING,
+        autoClose: false,
+        disallowClose: true,
+        color: 'blue',
+      }),
+    );
+    expect(updateNotifSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        color: 'green',
+        title: MSG_LOGOUT_OK,
+        message: 'You have been logged out',
+        icon: <IconCircleCheck />,
+        autoClose: 2000,
+      }),
+    );
   });
 });
