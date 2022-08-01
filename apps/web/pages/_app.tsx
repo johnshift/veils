@@ -1,15 +1,8 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-
-
-import { NotificationsProvider } from '@mantine/notifications';
-
-
-
 import { MantineWrapper } from '@shared/util-wrappers/mantine';
 import { ReactQueryWrapper } from '@shared/util-wrappers/react-query';
-
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
@@ -22,9 +15,7 @@ const App = ({ Component, pageProps }: AppProps) => (
     </Head>
     <MantineWrapper>
       <ReactQueryWrapper>
-        <NotificationsProvider>
-          <Component {...pageProps} />
-        </NotificationsProvider>
+        <Component {...pageProps} />
       </ReactQueryWrapper>
     </MantineWrapper>
   </>
