@@ -27,7 +27,7 @@ const Modal = () => {
   return (
     <div>
       <Button onClick={openLoginModal}>open login modal</Button>
-      <LoginModal />
+      <LoginModal fakeLoadingMs={1000} />
     </div>
   );
 };
@@ -80,7 +80,7 @@ Loading.parameters = {
         400,
         { session: emptySession, message: ERR_NETWORK },
         false,
-        5000,
+        5_000_000,
       ),
     ],
   },
