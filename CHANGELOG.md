@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/johnshift/veils/compare/v0.1.0...v0.1.1) (2022-08-01)
+
+
+### :toolbox: Maintenance :toolbox:
+
+* revert to nx default import paths ([e1c3be1](https://github.com/johnshift/veils/commit/e1c3be13eaa6ac8a7640222b1729edd94b4b2c1f))
+
 ## [0.1.0](https://github.com/johnshift/veils/compare/v0.0.6...v0.1.0) (2022-08-01)
 
 
