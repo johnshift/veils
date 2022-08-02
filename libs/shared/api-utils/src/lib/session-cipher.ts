@@ -2,7 +2,7 @@ import CryptoJS from 'crypto-js';
 import { v4 } from 'uuid';
 
 import type { Session } from '@auth/core-session';
-import { ApiError, ERR_INTERNAL } from '@shared/core-common';
+import { ApiError, ERR_INTERNAL, ERR_UNAUTHORIZED } from '@shared/core-common';
 
 // EncryptSessionCookie converts accessToken, session object and a csrf token -
 // into an encrypted string that will be stored in cookie.
@@ -35,13 +35,19 @@ export const encryptSessionCookie = async (
 
 // DecryptSessionCookie ...
 export const decryptSessionCookie = async (
-  encryptedToken: string,
+  encryptedToken?: string,
 ): Promise<[string, Session, string]> => {
   // Get aes key from env
   const { AES_KEY } = process.env;
   if (!AES_KEY) {
     console.log('Missing env: AES_KEY');
     throw new ApiError(500, ERR_INTERNAL);
+  }
+
+  // Throw unauthorized if no encrypted token
+  if (!encryptedToken) {
+    console.warn('decryptSessionCookie: No encryptedToken provied');
+    throw new ApiError(403, ERR_UNAUTHORIZED);
   }
 
   // Decrypt token

@@ -1,5 +1,5 @@
 import { fakeSession } from '@auth/util-test-session';
-import { ERR_INTERNAL } from '@shared/core-common';
+import { ERR_INTERNAL, ERR_UNAUTHORIZED } from '@shared/core-common';
 
 import { decryptSessionCookie, encryptSessionCookie } from './session-cipher';
 
@@ -49,6 +49,11 @@ describe('sessionCookieCipher', () => {
 
     // Assert throws error
     expect(decryptSessionCookie(sessionToken)).rejects.toThrow(ERR_INTERNAL);
+  });
+
+  test('decrypt no encryptedToken throws unauthorized', async () => {
+    // Assert throws error
+    expect(decryptSessionCookie()).rejects.toThrow(ERR_UNAUTHORIZED);
   });
 
   test('ok', async () => {
