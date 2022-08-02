@@ -1,5 +1,76 @@
 # Changelog
 
+## [0.2.1](https://github.com/johnshift/veils/compare/v0.2.0...v0.2.1) (2022-08-02)
+
+
+### :toolbox: Maintenance :toolbox:
+
+* add auth-api-logout lib ([eb27949](https://github.com/johnshift/veils/commit/eb27949f53e036f8914ddb5f8a6034a5e981d4f3))
+* add auth-api-register lib ([f4e1bf1](https://github.com/johnshift/veils/commit/f4e1bf1e4612f1a6fed08cce075fc84d0c1c6c4d))
+* add cookie deps ([83b981e](https://github.com/johnshift/veils/commit/83b981e500c92020fe1ca72a30650b6a8c77f6ef))
+* add crypto-js deps ([a2b4eee](https://github.com/johnshift/veils/commit/a2b4eeed541182c64947c86a6686daf745979a78))
+* add node-mocks-http deps ([acce81b](https://github.com/johnshift/veils/commit/acce81b75d7867cd267833e83b1fc0b8ae3adfe5))
+* add supabase env to test setup ([515d9e0](https://github.com/johnshift/veils/commit/515d9e033569f9d0d45dd74fef97936a5c967f30))
+* add supabase-js deps ([5945de7](https://github.com/johnshift/veils/commit/5945de71bfc93c581ccf96284f22dd9029f610fe))
+* add type:api lib tag ([b9bc1fd](https://github.com/johnshift/veils/commit/b9bc1fd306bdd83de3c839551d2b44ad212ecbe6))
+* moved session cipher to shared-api-utils lib ([24a304f](https://github.com/johnshift/veils/commit/24a304f65d8d9613b263b7659f1890662e0c84f3))
+* nx auto format project.json ([eacbed7](https://github.com/johnshift/veils/commit/eacbed7273adf3fc1773e84508d895f024feb384))
+* setup auth-api-login lib ([88b2627](https://github.com/johnshift/veils/commit/88b2627b42c36ee4ac72b3078218241ee97d0387))
+* setup auth-api-session lib ([924a4bd](https://github.com/johnshift/veils/commit/924a4bdec34f1272e3a5c37167702d56e8115e43))
+* setup shared-api-utils lib ([79b9cbe](https://github.com/johnshift/veils/commit/79b9cbe45c03c2726339663aaf0f6e410e06d428))
+* setup shared-supabase lib ([a3b50cf](https://github.com/johnshift/veils/commit/a3b50cf06202dc7e3943cf9f6955518343499545))
+* type:api libs can now import other api libs ([414724e](https://github.com/johnshift/veils/commit/414724ef1ebcddc8fde23110e2645abd1b2bcb90))
+
+
+### :computer: Code Changes :computer:
+
+* **api-login:** add login handler ([19193e0](https://github.com/johnshift/veils/commit/19193e0e68939fd7e14f00e4582dfe8db32da43f))
+* **api-login:** add login handler unit test ([90f485a](https://github.com/johnshift/veils/commit/90f485a6633bdd939da41823192f6b48d5d88735))
+* **api-login:** moved login, get-email rpc into api lib ([34339bf](https://github.com/johnshift/veils/commit/34339bf5e809db50acc8e65fa88f903d31ca1c41))
+* **api-logout:** add logotu handler ([9b5a0d8](https://github.com/johnshift/veils/commit/9b5a0d8cb50e4226b0fba9701fff38f581e64a73))
+* **api-logout:** add logout rpc ([2650eb3](https://github.com/johnshift/veils/commit/2650eb368cd9a304d3dfdbf86fc874411d7efafe))
+* **api-register:** add register handler ([c910d50](https://github.com/johnshift/veils/commit/c910d502e7052fafbb1b50a281679d2935f8047f))
+* **api-register:** add register rpc ([dcdae1d](https://github.com/johnshift/veils/commit/dcdae1d118f20753d7ad03e2c34454d3ab622c3f))
+* **api-register:** add register-preflight rpc ([dac08b2](https://github.com/johnshift/veils/commit/dac08b28125b630fa325b07e5ab0afcb10ad7051))
+* **api-session:** add check session fn ([605635d](https://github.com/johnshift/veils/commit/605635d9bdcc02751265a295f0ac94a7389a5343))
+* **api-session:** add check-session empty encryption guard ([bc07380](https://github.com/johnshift/veils/commit/bc0738026300a9255343708bd1552b52507444cb))
+* **api-session:** add session query handler ([28dbce5](https://github.com/johnshift/veils/commit/28dbce5e267fd66c44230554928c2b0303746aae))
+* **api-session:** moved get-session-info rpc into api lib ([6375ab5](https://github.com/johnshift/veils/commit/6375ab5929b54191b16259de91df460deb766fa1))
+* **api-utils:** add decrypt-session-cookie undefined token guard ([799002b](https://github.com/johnshift/veils/commit/799002bfa0cc48a40e761cdb6070e287a040ec9a))
+* **api-utils:** add parse payload util fn ([5a0253c](https://github.com/johnshift/veils/commit/5a0253cdbccf4116f71855b0ecf0d0a4ad632eb4))
+* **api-utils:** add set-session-cookie fn ([ccfe792](https://github.com/johnshift/veils/commit/ccfe7927d26d77ce8e2e325d4fab55e4d5a6cdb3))
+* **core-common:** add api-error class ([c0cbd7b](https://github.com/johnshift/veils/commit/c0cbd7b43195532c8345ce1390daf05be7756212))
+* **core-common:** add cookie key constants ([e0259be](https://github.com/johnshift/veils/commit/e0259be9c856c9b31f5d5fbc0c2238b724560041))
+* **core-common:** add http error constants ([87e2939](https://github.com/johnshift/veils/commit/87e293955af10fa9025f1f7176129401f136b5d6))
+* **core-common:** add node-mocks-http types for nextjs ([59b8e3d](https://github.com/johnshift/veils/commit/59b8e3d910e59ef4119fcfa93c71297e5ea3ee9b))
+* **core-register:** add register error class ([4645d19](https://github.com/johnshift/veils/commit/4645d1911d5f83d6ca77a0093f5a25000d8b75ec))
+* **core-register:** add register-preflight constants ([4dce928](https://github.com/johnshift/veils/commit/4dce928efbd247152dd4991d1ab00e4e8adff81f))
+* **data-login:** add get-email rpc ([9b3a54f](https://github.com/johnshift/veils/commit/9b3a54fb35f675651c01a380cc5920c21499b739))
+* **data-login:** add login rpc ([82cbe48](https://github.com/johnshift/veils/commit/82cbe488c45240be018778b7eb3039d175e30906))
+* **data-session:** add get-session-info rpc ([cdc0b7f](https://github.com/johnshift/veils/commit/cdc0b7f68899c73087440af4b3724c6f5d49d402))
+* **supabase:** add admin client ([1462414](https://github.com/johnshift/veils/commit/146241431bb0460bd61d8054c41b8d9549c54672))
+* **supabase:** add anon client ([c492c93](https://github.com/johnshift/veils/commit/c492c9336acd0fb9168079a41fcd9e69703cb100))
+* **supabase:** add env var constants ([36415d7](https://github.com/johnshift/veils/commit/36415d71a006d3c29bbd929883ab760e957146f4))
+* **supabase:** add supabase access token type ([3d2765f](https://github.com/johnshift/veils/commit/3d2765f925cad04548e8a7b20f3edf2e2aa0bc65))
+* **util-common:** add session cipher util functions ([d669db1](https://github.com/johnshift/veils/commit/d669db1d8629a396ae2f47498553b104a770d632))
+
+
+### :drop_of_blood: :crossed_swords: Tests :crossed_swords: :drop_of_blood:
+
+* **api-logout:** add logout handler unit test ([28017e3](https://github.com/johnshift/veils/commit/28017e3ab42b0124fda54f8cb71f47d8fdc544e2))
+* **api-logout:** add logout rpc unit test ([947f106](https://github.com/johnshift/veils/commit/947f10619ddcf9c1ea506eaec08e15971acc368c))
+* **api-register:** add register handler unit test ([bc6cce5](https://github.com/johnshift/veils/commit/bc6cce56ae0fc47937f02789faaf46e4f86989e6))
+* **api-register:** add register rpc unit test ([90c3f0b](https://github.com/johnshift/veils/commit/90c3f0b8ce0dad5086ccb869b510e151dea571f0))
+* **api-register:** add register-preflight unit test ([0176f74](https://github.com/johnshift/veils/commit/0176f74fad75e0b7e1e29f6f57f9c27e4bd18cb9))
+* **api-session:** add check session unit test ([f407cce](https://github.com/johnshift/veils/commit/f407cce10472eabc1d1728e08c108598d2c7a4c0))
+* **api-session:** add session query handler unit test ([ef0ee92](https://github.com/johnshift/veils/commit/ef0ee922425b9b01868ed9d5a8c6dae2b04dc93a))
+* **api-utils:** add parse payload unit test ([6697428](https://github.com/johnshift/veils/commit/6697428f7958428dd04f41b357669294445db4d3))
+* **api-utils:** add set-session-cookie unit test ([b90c111](https://github.com/johnshift/veils/commit/b90c111ccb4e264ab705975edf715ce389fb3d43))
+* **data-login:** add get-email unit test ([3390f4f](https://github.com/johnshift/veils/commit/3390f4fc3b80565adac4534ee2b2f308c82b15ad))
+* **data-login:** add login unit test ([fd5eb81](https://github.com/johnshift/veils/commit/fd5eb818c54558dc4a606cac8447a3e78fc5f055))
+* **data-session:** add get-session-info unit test ([2975323](https://github.com/johnshift/veils/commit/29753230687be1028aa65d21d735f3c4f541e30c))
+* **util-common:** add session cipher unit test ([ee35cf5](https://github.com/johnshift/veils/commit/ee35cf50c764454defd978ec931a3322ec615cd2))
+
 ## [0.2.0](https://github.com/johnshift/veils/compare/v0.1.1...v0.2.0) (2022-08-02)
 
 
