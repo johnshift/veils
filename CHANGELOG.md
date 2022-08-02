@@ -1,5 +1,41 @@
 # Changelog
 
+## [0.2.0](https://github.com/johnshift/veils/compare/v0.1.1...v0.2.0) (2022-08-02)
+
+
+### :sparkles: :fire: Features :fire: :sparkles:
+
+* appbar ([d99a3a3](https://github.com/johnshift/veils/commit/d99a3a340edebe97147f2d085c2fb987055de48a))
+
+
+### :toolbox: Maintenance :toolbox:
+
+* increased success notification duration to 4s ([229a914](https://github.com/johnshift/veils/commit/229a914a4b4c0812ca70ad599ac40e0e87369e4e))
+* setup auth-feature-appbar lib ([be14e5e](https://github.com/johnshift/veils/commit/be14e5e6829b56e12c50736ff95a0153cc38d171))
+* setup auth-util-login lib ([a48ad36](https://github.com/johnshift/veils/commit/a48ad36496d3f06dd2f02b3581ff8f58a4ada89d))
+
+
+### :drop_of_blood: :crossed_swords: Tests :crossed_swords: :drop_of_blood:
+
+* **feature-appbar:** add appbar stories ([4dbe322](https://github.com/johnshift/veils/commit/4dbe322097d87eeaf35e4bdec6bd22fdda016485))
+* **feature-appbar:** add appbar unit/integration test ([f0e5446](https://github.com/johnshift/veils/commit/f0e544634300e1deeed4d75a5e5aba0bd5e5e21f))
+
+
+### :computer: Code Changes :computer:
+
+* **feature-appbar:** add appbar logic hook ([4146a9b](https://github.com/johnshift/veils/commit/4146a9b49f33384583892ade390590ea48e4ed78))
+* **feature-appbar:** add logout logic ([e6a6f0c](https://github.com/johnshift/veils/commit/e6a6f0ca669647fef34efc999359e99b9444eea5))
+* **feature-appbar:** setup storybook config ([d0c7d77](https://github.com/johnshift/veils/commit/d0c7d77daa2b51f02629214e31ab00ae4bca3201))
+* **feature-login-modal:** expose props for dynamic use ([882b626](https://github.com/johnshift/veils/commit/882b626e684521daa5c05ed2de8cdc2693aa3cfc))
+* **feature-login-modal:** moved test wrapper inside spec to get rid of circular dep ([3874a06](https://github.com/johnshift/veils/commit/3874a0629f09f8bc8214907d9b67dc916c4a73c7))
+* **feature-testutils:** add login modal to wrapper ([1495537](https://github.com/johnshift/veils/commit/1495537b46953cfc7e7bdbeade80c1d51ffccc35))
+* **feature-testutils:** fix readme doc typo ([0e3ceea](https://github.com/johnshift/veils/commit/0e3ceea2aaa874a1b2fb9024391c7e4bab05fa2b))
+* **ui-appbar:** update menu props to include more explicit menu controls ([5e5d91f](https://github.com/johnshift/veils/commit/5e5d91ffcaca548bcb05dc7a8b22b15643d71ab3))
+* **util-login:** moved login validation ([b819ff5](https://github.com/johnshift/veils/commit/b819ff54fd73a4ef9e186b25ceba810cd1d4be9c))
+* **util-wrappers:** add custom breakpoints ([65dad85](https://github.com/johnshift/veils/commit/65dad85581db6642f43d34e11fcaf334d5bc80e8))
+* **util-wrappers:** add page padding wrapper ([3e55057](https://github.com/johnshift/veils/commit/3e55057b9f7e01a6eb25e037ebee89c8b255064a))
+* **web:** add dynamic appbar, login modal ([f537dda](https://github.com/johnshift/veils/commit/f537ddac7e81c6304ba0688a4511d886a1fc540f))
+
 ## [0.1.1](https://github.com/johnshift/veils/compare/v0.1.0...v0.1.1) (2022-08-01)
 
 
