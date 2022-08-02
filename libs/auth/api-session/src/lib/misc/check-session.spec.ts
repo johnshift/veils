@@ -7,6 +7,11 @@ import { encryptSessionCookie } from '@shared/util-common';
 import { checkSession } from './check-session';
 
 describe('checkSession', () => {
+  test('undefined encrypted token', async () => {
+    // Exec fn
+    expect(await checkSession()).toStrictEqual(emptySession);
+  });
+
   test('empty accessToken', async () => {
     // Mock args
     const accessToken = '';
