@@ -35,7 +35,7 @@ export const useNotifyLoading = () => {
       message,
       color: 'green',
       icon: <IconCircleCheck />,
-      autoClose: 2000,
+      autoClose: 4000,
     });
   };
 

@@ -177,7 +177,7 @@ describe('useLogoutMutation', () => {
         title: MSG_LOGOUT_OK,
         message: 'You have been logged out',
         icon: <IconCircleCheck />,
-        autoClose: 2000,
+        autoClose: 4000,
       }),
     );
   });

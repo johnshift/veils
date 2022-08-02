@@ -31,7 +31,10 @@ describe('useNotifyLoading', () => {
     // Assert loading notification
     const loadingMsg = 'loading';
     const showNotifSpy = jest.spyOn(mantineNotifications, 'showNotification');
-    const cleanNotifSpy = jest.spyOn(mantineNotifications, 'cleanNotifications');
+    const cleanNotifSpy = jest.spyOn(
+      mantineNotifications,
+      'cleanNotifications',
+    );
     await act(() => result.current.notifyLoading(loadingMsg));
     await waitFor(() => {
       expect(showNotifSpy).toHaveBeenCalledWith(
@@ -59,7 +62,7 @@ describe('useNotifyLoading', () => {
           message: successMsg,
           color: 'green',
           icon: <IconCircleCheck />,
-          autoClose: 2000,
+          autoClose: 4000,
         }),
       );
     });
