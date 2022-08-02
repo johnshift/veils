@@ -1,5 +1,8 @@
 import 'whatwg-fetch';
 
+// Aes key
+process.env['AES_KEY'] = 'PeShVmYq3t6w9z$B&E)H@McQfTjWnZr4';
+
 // Supabase env
 process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321';
 process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] =
