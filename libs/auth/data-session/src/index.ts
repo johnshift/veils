@@ -7,6 +7,3 @@ export { useSessionQuery } from './lib/fetch/use-session-query';
 
 // Provider
 export { SessionProvider } from './lib/providers/session-provider';
-
-// Rpc
-export { getSessionInfo } from './lib/rpc/get-session-info';
