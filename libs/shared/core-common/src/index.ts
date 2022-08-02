@@ -11,3 +11,6 @@ export {
 
 // Dtos
 export type { GenericResponse } from './lib/dto/generic-response';
+
+// Error class
+export { ApiError } from './lib/errors/api-error';
