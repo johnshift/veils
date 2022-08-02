@@ -41,6 +41,7 @@ specifiers:
   '@testing-library/react': 13.3.0
   '@testing-library/user-event': ^14.3.0
   '@trivago/prettier-plugin-sort-imports': ^3.3.0
+  '@types/crypto-js': ^4.1.1
   '@types/jest': 27.4.1
   '@types/node': 16.11.7
   '@types/react': 18.0.15
@@ -51,6 +52,7 @@ specifiers:
   babel-jest: 27.5.1
   babel-loader: 8.1.0
   core-js: ^3.6.5
+  crypto-js: ^4.1.1
   cypress: ^10.2.0
   eslint: ^8.20.0
   eslint-config-next: 12.2.3
@@ -98,6 +100,7 @@ dependencies:
   '@tabler/icons': 1.78.1_react-dom@18.2.0+react@18.2.0
   '@tanstack/react-query': 4.0.10_react-dom@18.2.0+react@18.2.0
   core-js: 3.24.1
+  crypto-js: 4.1.1
   next: 12.2.3_07d887d3eaac65335aa8efa14d431939
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -135,6 +138,7 @@ devDependencies:
   '@testing-library/react': 13.3.0_react-dom@18.2.0+react@18.2.0
   '@testing-library/user-event': 14.3.0_@testing-library+dom@8.16.0
   '@trivago/prettier-plugin-sort-imports': 3.3.0_prettier@2.7.1
+  '@types/crypto-js': 4.1.1
   '@types/jest': 27.4.1
   '@types/node': 16.11.7
   '@types/react': 18.0.15
@@ -6720,6 +6724,10 @@ packages:
     resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
     dev: true
 
+  /@types/crypto-js/4.1.1:
+    resolution: {integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==}
+    dev: true
+
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
@@ -9406,6 +9414,10 @@ packages:
       randombytes: 2.1.0
       randomfill: 1.0.4
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
 
   /css-declaration-sorter/6.3.0_postcss@8.4.14:
     resolution: {integrity: sha512-OGT677UGHJTAVMRhPO+HJ4oKln3wkBTwtDFH0ojbqm+MJm6xuDMHp2nkhh/ThaBqq20IbraBQSWKfSLNHQO9Og==}
