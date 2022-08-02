@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/auth/api-logout/src",
+  "projectType": "library",
+  "tags": ["type:api"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/auth/api-logout/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/auth/api-logout"],
+      "options": {
+        "jestConfig": "libs/auth/api-logout/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
