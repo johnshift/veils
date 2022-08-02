@@ -59,7 +59,11 @@
               },
               {
                 "sourceTag": "type:api",
-                "onlyDependOnLibsWithTags": ["type:core", "type:util"]
+                "onlyDependOnLibsWithTags": [
+                  "type:core",
+                  "type:util",
+                  "type:api"
+                ]
               }
             ]
           }
