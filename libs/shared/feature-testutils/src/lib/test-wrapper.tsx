@@ -2,11 +2,8 @@ import { QueryClient } from '@tanstack/react-query';
 import { ReactNode } from 'react';
 
 import { SessionProvider } from '@auth/data-session';
+import { LoginModal } from '@auth/feature-login-modal';
 import { MantineWrapper, ReactQueryWrapper } from '@shared/util-wrappers';
-
-interface Props {
-  children: ReactNode;
-}
 
 const queryClient = new QueryClient({
   logger: {
@@ -31,10 +28,16 @@ const queryClient = new QueryClient({
   },
 });
 
+interface Props {
+  children: ReactNode;
+}
+
 export const TestWrapper = ({ children }: Props) => (
   <MantineWrapper>
     <ReactQueryWrapper client={queryClient}>
-      <SessionProvider>{children}</SessionProvider>
+      <SessionProvider>
+        {children} <LoginModal fakeLoadingMs={50} />
+      </SessionProvider>
     </ReactQueryWrapper>
   </MantineWrapper>
 );
