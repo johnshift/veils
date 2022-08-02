@@ -14,3 +14,6 @@ export type {
 
 // Misc
 export { RegisterFieldError } from './lib/misc';
+
+// Error class
+export { RegisterError } from './lib/errors';
