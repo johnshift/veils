@@ -4,6 +4,7 @@
   "projects": {
     "auth-api-login": "libs/auth/api-login",
     "auth-api-logout": "libs/auth/api-logout",
+    "auth-api-register": "libs/auth/api-register",
     "auth-api-session": "libs/auth/api-session",
     "auth-core-login": "libs/auth/core-login",
     "auth-core-logout": "libs/auth/core-logout",
