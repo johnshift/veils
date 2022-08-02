@@ -6,3 +6,4 @@ export {
 
 // Misc
 export { setSessionCookie } from './lib/set-session-cookie';
+export { parsePayload } from './lib/parse-payload';
