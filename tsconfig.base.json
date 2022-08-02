@@ -36,6 +36,7 @@
       "@auth/util-test-logout": ["libs/auth/util-test-logout/src/index.ts"],
       "@auth/util-test-register": ["libs/auth/util-test-register/src/index.ts"],
       "@auth/util-test-session": ["libs/auth/util-test-session/src/index.ts"],
+      "@shared/api-utils": ["libs/shared/api-utils/src/index.ts"],
       "@shared/core-common": ["libs/shared/core-common/src/index.ts"],
       "@shared/data-testutils": ["libs/shared/data-testutils/src/index.ts"],
       "@shared/feature-appbar": ["libs/shared/feature-appbar/src/index.ts"],

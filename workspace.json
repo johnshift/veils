@@ -21,6 +21,7 @@
     "auth-util-test-logout": "libs/auth/util-test-logout",
     "auth-util-test-register": "libs/auth/util-test-register",
     "auth-util-test-session": "libs/auth/util-test-session",
+    "shared-api-utils": "libs/shared/api-utils",
     "shared-core-common": "libs/shared/core-common",
     "shared-data-testutils": "libs/shared/data-testutils",
     "shared-feature-appbar": "libs/shared/feature-appbar",
