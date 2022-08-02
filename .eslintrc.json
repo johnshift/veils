@@ -56,6 +56,10 @@
               {
                 "sourceTag": "type:feature",
                 "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "type:api",
+                "onlyDependOnLibsWithTags": ["type:core", "type:util"]
               }
             ]
           }
