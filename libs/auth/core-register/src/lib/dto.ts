@@ -20,3 +20,9 @@ export type RegisterErrorResponse = {
   message: string;
   field: RegisterFieldError | undefined;
 };
+
+export type RegisterPreflightResponse = {
+  usernameTaken: boolean;
+  emailTaken: boolean;
+  veilTaken: boolean;
+};
