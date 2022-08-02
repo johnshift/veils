@@ -11,6 +11,7 @@ export {
   PLACEHOLDER_PRINCIPAL,
   TESTID_PASSWORD_VISIBILITY,
   URL_API_AUTH_LOGIN,
+  RPC_GET_EMAIL,
 } from './lib/constants';
 
 export type { LoginResponse, LoginPayload } from './lib/dto';

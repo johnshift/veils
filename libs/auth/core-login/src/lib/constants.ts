@@ -18,3 +18,6 @@ export const MAX_LENGTH_PASSWORD = 64;
 export const PLACEHOLDER_PRINCIPAL = 'Username/Email';
 export const PLACEHOLDER_PASSWORD = 'Password';
 export const TESTID_PASSWORD_VISIBILITY = 'toggle-password-visibility';
+
+// Rpcs
+export const RPC_GET_EMAIL = 'get_email';
