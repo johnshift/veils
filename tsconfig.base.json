@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@auth/api-login": ["libs/auth/api-login/src/index.ts"],
       "@auth/api-session": ["libs/auth/api-session/src/index.ts"],
       "@auth/core-login": ["libs/auth/core-login/src/index.ts"],
       "@auth/core-logout": ["libs/auth/core-logout/src/index.ts"],
