@@ -2,7 +2,7 @@ import { v4 } from 'uuid';
 
 import { emptySession } from '@auth/core-session';
 import { fakeSession } from '@auth/util-test-session';
-import { encryptSessionCookie } from '@shared/util-common';
+import { encryptSessionCookie } from '@shared/api-utils';
 
 import { checkSession } from './check-session';
 

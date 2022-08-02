@@ -1,7 +1,7 @@
 // CheckSession returns the session if present in encryptedToken
 import { emptySession } from '@auth/core-session';
+import { decryptSessionCookie } from '@shared/api-utils';
 import { SupabaseAccessToken } from '@shared/supabase';
-import { decryptSessionCookie } from '@shared/util-common';
 
 // Returns emptySession if no accessToken or expired
 export const checkSession = async (encryptedToken?: string) => {

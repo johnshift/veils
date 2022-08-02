@@ -2,9 +2,9 @@ import { createMocks } from 'node-mocks-http';
 
 import { emptySession } from '@auth/core-session';
 import { fakeSession } from '@auth/util-test-session';
+import { encryptSessionCookie } from '@shared/api-utils';
 import { COOKEY_SESSION, ERR_METHOD_NOT_ALLOWED } from '@shared/core-common';
 import type { MockApiRequest, MockApiResponse } from '@shared/core-common';
-import { encryptSessionCookie } from '@shared/util-common';
 
 import { sessionHandler } from './session-handler';
 
