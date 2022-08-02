@@ -1,6 +1,7 @@
 import { useMantineColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
+import { useLogoutMutation } from '@auth/data-logout';
 import { useSessionContext } from '@auth/data-session';
 
 // UseAppbar hook separates logic from ui
@@ -19,10 +20,13 @@ export const useAppbar = () => {
   // Menu controls
   const [menuIsOpen, menuHandlers] = useDisclosure(false);
 
+  // Logout mutation
+  const { isLoading: logoutLoading, mutate: logoutMutate } =
+    useLogoutMutation();
+
   // Auth fn
   const authFn = () => {
-    console.count('authFn');
-    isLoggedIn ? console.log('todo: logout') : openLoginModal();
+    isLoggedIn ? logoutMutate() : openLoginModal();
   };
 
   return {
@@ -33,6 +37,7 @@ export const useAppbar = () => {
     menuIsOpen,
     menuOnOpen: menuHandlers.open,
     menuOnClose: menuHandlers.close,
+    logoutLoading,
     authFn,
   };
 };
