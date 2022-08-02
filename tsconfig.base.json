@@ -38,6 +38,7 @@
       "@shared/feature-testutils": [
         "libs/shared/feature-testutils/src/index.ts"
       ],
+      "@shared/supabase": ["libs/shared/supabase/src/index.ts"],
       "@shared/ui-appbar": ["libs/shared/ui-appbar/src/index.ts"],
       "@shared/ui-testutils": ["libs/shared/ui-testutils/src/index.ts"],
       "@shared/util-common": ["libs/shared/util-common/src/index.ts"],

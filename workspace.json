@@ -21,6 +21,7 @@
     "shared-data-testutils": "libs/shared/data-testutils",
     "shared-feature-appbar": "libs/shared/feature-appbar",
     "shared-feature-testutils": "libs/shared/feature-testutils",
+    "shared-supabase": "libs/shared/supabase",
     "shared-ui-appbar": "libs/shared/ui-appbar",
     "shared-ui-testutils": "libs/shared/ui-testutils",
     "shared-util-common": "libs/shared/util-common",
