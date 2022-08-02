@@ -18,13 +18,13 @@ import { PasswordInput, PrincipalInput } from '@auth/ui-login-form';
 
 import { useLoginForm } from './hooks/use-login-form';
 
-type Props = {
+export type LoginModalProps = {
   // FakeLoadingMs determines the delay for validation error notification
   // This provides option to cut delay during tests. Defaults to 1000.
   fakeLoadingMs: number;
 };
 
-export const LoginModal = ({ fakeLoadingMs }: Props) => {
+export const LoginModal = ({ fakeLoadingMs }: LoginModalProps) => {
   const { openedLoginModal, closeLoginModal } = useSessionContext();
   const {
     closeModal,
